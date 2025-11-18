@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Configuration for exposing hidden activities -->
+    
+    <!-- Widget Activities -->
+    <string name="activity_widget">com.sec.android.app.camera.Widget</string>
+    <string name="activity_qr_scanner">com.sec.android.app.camera.QrScanner</string>
+    
+    <!-- Configuration Activities -->
+    <string name="activity_widget_configuration">com.sec.android.app.camera.setting.WidgetConfigurationActivity</string>
+    <string name="activity_widget_lockscreen_configuration">com.sec.android.app.camera.setting.WidgetLockscreenConfigurationActivity</string>
+    <string name="activity_widget_custom">com.sec.android.app.camera.setting.WidgetCustomActivity</string>
+    
+    <!-- Utility Activities -->
+    <string name="activity_dummy">com.sec.android.app.camera.DummyActivity</string>
+    <string name="activity_camera_assistant_notice">com.sec.android.app.camera.CameraAssistantNoticeActivity</string>
+    <string name="activity_edit_name">com.sec.android.app.camera.EditNameActivity</string>
+    
+    <!-- Settings Activities -->
+    <string name="activity_camera_setting">com.sec.android.app.camera.setting.CameraSettingActivity</string>
+    <string name="activity_sub_camera_setting">com.sec.android.app.camera.setting.SubCameraSettingActivity</string>
+    
+    <!-- Advanced Settings Aliases -->
+    <string name="activity_features">com.sec.android.app.camera.setting.Features</string>
+    <string name="activity_setting_to_keep">com.sec.android.app.camera.setting.SettingToKeep</string>
+    <string name="activity_shooting_method">com.sec.android.app.camera.setting.ShootingMethod</string>
+    <string name="activity_advanced_recording">com.sec.android.app.camera.setting.AdvancedRecordingOptions</string>
+    <string name="activity_save_options">com.sec.android.app.camera.setting.SaveOptions</string>
+    <string name="activity_watermark">com.sec.android.app.camera.setting.Watermark</string>
+</resources>
