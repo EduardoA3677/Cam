@@ -1,0 +1,142 @@
+.class public final Landroidx/compose/ui/text/PlaceholderVerticalAlign$Companion;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/compose/ui/text/PlaceholderVerticalAlign;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Companion"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\u0014\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0010\b\u0086\u0003\u0018\u00002\u00020\u0001B\u0007\b\u0002¢\u0006\u0002\u0010\u0002R\u0019\u0010\u0003\u001a\u00020\u0004ø\u0001\u0000ø\u0001\u0001¢\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u0005\u0010\u0006R\u0019\u0010\b\u001a\u00020\u0004ø\u0001\u0000ø\u0001\u0001¢\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\t\u0010\u0006R\u0019\u0010\n\u001a\u00020\u0004ø\u0001\u0000ø\u0001\u0001¢\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u000b\u0010\u0006R\u0019\u0010\f\u001a\u00020\u0004ø\u0001\u0000ø\u0001\u0001¢\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\r\u0010\u0006R\u0019\u0010\u000e\u001a\u00020\u0004ø\u0001\u0000ø\u0001\u0001¢\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u000f\u0010\u0006R\u0019\u0010\u0010\u001a\u00020\u0004ø\u0001\u0000ø\u0001\u0001¢\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u0011\u0010\u0006R\u0019\u0010\u0012\u001a\u00020\u0004ø\u0001\u0000ø\u0001\u0001¢\u0006\n\n\u0002\u0010\u0007\u001a\u0004\b\u0013\u0010\u0006\u0082\u0002\u000b\n\u0005\b¡\u001e0\u0001\n\u0002\b!¨\u0006\u0014"
+    }
+    d2 = {
+        "Landroidx/compose/ui/text/PlaceholderVerticalAlign$Companion;",
+        "",
+        "()V",
+        "AboveBaseline",
+        "Landroidx/compose/ui/text/PlaceholderVerticalAlign;",
+        "getAboveBaseline-J6kI3mc",
+        "()I",
+        "I",
+        "Bottom",
+        "getBottom-J6kI3mc",
+        "Center",
+        "getCenter-J6kI3mc",
+        "TextBottom",
+        "getTextBottom-J6kI3mc",
+        "TextCenter",
+        "getTextCenter-J6kI3mc",
+        "TextTop",
+        "getTextTop-J6kI3mc",
+        "Top",
+        "getTop-J6kI3mc",
+        "ui-text_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# direct methods
+.method private constructor <init>()V
+    .registers 1
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Lkotlin/jvm/internal/h;)V
+    .registers 2
+
+    .line 1
+    invoke-direct {p0}, Landroidx/compose/ui/text/PlaceholderVerticalAlign$Companion;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final getAboveBaseline-J6kI3mc()I
+    .registers 1
+
+    invoke-static {}, Landroidx/compose/ui/text/PlaceholderVerticalAlign;->access$getAboveBaseline$cp()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final getBottom-J6kI3mc()I
+    .registers 1
+
+    invoke-static {}, Landroidx/compose/ui/text/PlaceholderVerticalAlign;->access$getBottom$cp()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final getCenter-J6kI3mc()I
+    .registers 1
+
+    invoke-static {}, Landroidx/compose/ui/text/PlaceholderVerticalAlign;->access$getCenter$cp()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final getTextBottom-J6kI3mc()I
+    .registers 1
+
+    invoke-static {}, Landroidx/compose/ui/text/PlaceholderVerticalAlign;->access$getTextBottom$cp()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final getTextCenter-J6kI3mc()I
+    .registers 1
+
+    invoke-static {}, Landroidx/compose/ui/text/PlaceholderVerticalAlign;->access$getTextCenter$cp()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final getTextTop-J6kI3mc()I
+    .registers 1
+
+    invoke-static {}, Landroidx/compose/ui/text/PlaceholderVerticalAlign;->access$getTextTop$cp()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public final getTop-J6kI3mc()I
+    .registers 1
+
+    invoke-static {}, Landroidx/compose/ui/text/PlaceholderVerticalAlign;->access$getTop$cp()I
+
+    move-result p0
+
+    return p0
+.end method

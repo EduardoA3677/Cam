@@ -1,0 +1,225 @@
+.class public final Landroidx/compose/ui/text/input/SetComposingRegionCommand;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroidx/compose/ui/text/input/EditCommand;
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u00004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\u0010\b\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0000\n\u0000\n\u0002\u0010\u000b\n\u0002\b\u0004\n\u0002\u0010\u000e\n\u0002\b\u0006\b\u0007\u0018\u00002\u00020\u0001B\u0017\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0004\u001a\u00020\u0002¢\u0006\u0004\b\u0005\u0010\u0006J\u0017\u0010\n\u001a\u00020\t2\u0006\u0010\b\u001a\u00020\u0007H\u0016¢\u0006\u0004\b\n\u0010\u000bJ\u001a\u0010\u000f\u001a\u00020\u000e2\b\u0010\r\u001a\u0004\u0018\u00010\fH\u0096\u0002¢\u0006\u0004\b\u000f\u0010\u0010J\u000f\u0010\u0011\u001a\u00020\u0002H\u0016¢\u0006\u0004\b\u0011\u0010\u0012J\u000f\u0010\u0014\u001a\u00020\u0013H\u0016¢\u0006\u0004\b\u0014\u0010\u0015R\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010\u0016\u001a\u0004\b\u0017\u0010\u0012R\u0017\u0010\u0004\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0004\u0010\u0016\u001a\u0004\b\u0018\u0010\u0012¨\u0006\u0019"
+    }
+    d2 = {
+        "Landroidx/compose/ui/text/input/SetComposingRegionCommand;",
+        "Landroidx/compose/ui/text/input/EditCommand;",
+        "",
+        "start",
+        "end",
+        "<init>",
+        "(II)V",
+        "Landroidx/compose/ui/text/input/EditingBuffer;",
+        "buffer",
+        "Lv3/o;",
+        "applyTo",
+        "(Landroidx/compose/ui/text/input/EditingBuffer;)V",
+        "",
+        "other",
+        "",
+        "equals",
+        "(Ljava/lang/Object;)Z",
+        "hashCode",
+        "()I",
+        "",
+        "toString",
+        "()Ljava/lang/String;",
+        "I",
+        "getStart",
+        "getEnd",
+        "ui-text_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final $stable:I
+
+
+# instance fields
+.field private final end:I
+
+.field private final start:I
+
+
+# direct methods
+.method public constructor <init>(II)V
+    .registers 3
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->start:I
+
+    iput p2, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->end:I
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public applyTo(Landroidx/compose/ui/text/input/EditingBuffer;)V
+    .registers 5
+
+    invoke-virtual {p1}, Landroidx/compose/ui/text/input/EditingBuffer;->hasComposition$ui_text_release()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    invoke-virtual {p1}, Landroidx/compose/ui/text/input/EditingBuffer;->commitComposition$ui_text_release()V
+
+    :cond_9
+    iget v0, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->start:I
+
+    invoke-virtual {p1}, Landroidx/compose/ui/text/input/EditingBuffer;->getLength$ui_text_release()I
+
+    move-result v1
+
+    const/4 v2, 0x0
+
+    invoke-static {v0, v2, v1}, Lcom/samsung/context/sdk/samsunganalytics/internal/sender/c;->l(III)I
+
+    move-result v0
+
+    iget p0, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->end:I
+
+    invoke-virtual {p1}, Landroidx/compose/ui/text/input/EditingBuffer;->getLength$ui_text_release()I
+
+    move-result v1
+
+    invoke-static {p0, v2, v1}, Lcom/samsung/context/sdk/samsunganalytics/internal/sender/c;->l(III)I
+
+    move-result p0
+
+    if-eq v0, p0, :cond_29
+
+    if-ge v0, p0, :cond_26
+
+    invoke-virtual {p1, v0, p0}, Landroidx/compose/ui/text/input/EditingBuffer;->setComposition$ui_text_release(II)V
+
+    goto :goto_29
+
+    :cond_26
+    invoke-virtual {p1, p0, v0}, Landroidx/compose/ui/text/input/EditingBuffer;->setComposition$ui_text_release(II)V
+
+    :cond_29
+    :goto_29
+    return-void
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .registers 6
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_4
+
+    return v0
+
+    :cond_4
+    instance-of v1, p1, Landroidx/compose/ui/text/input/SetComposingRegionCommand;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_a
+
+    return v2
+
+    :cond_a
+    iget v1, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->start:I
+
+    check-cast p1, Landroidx/compose/ui/text/input/SetComposingRegionCommand;
+
+    iget v3, p1, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->start:I
+
+    if-eq v1, v3, :cond_13
+
+    return v2
+
+    :cond_13
+    iget p0, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->end:I
+
+    iget p1, p1, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->end:I
+
+    if-eq p0, p1, :cond_1a
+
+    return v2
+
+    :cond_1a
+    return v0
+.end method
+
+.method public final getEnd()I
+    .registers 1
+
+    iget p0, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->end:I
+
+    return p0
+.end method
+
+.method public final getStart()I
+    .registers 1
+
+    iget p0, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->start:I
+
+    return p0
+.end method
+
+.method public hashCode()I
+    .registers 2
+
+    iget v0, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->start:I
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget p0, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->end:I
+
+    add-int/2addr v0, p0
+
+    return v0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .registers 3
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    const-string v1, "SetComposingRegionCommand(start="
+
+    invoke-direct {v0, v1}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    iget v1, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->start:I
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    const-string v1, ", end="
+
+    invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    iget p0, p0, Landroidx/compose/ui/text/input/SetComposingRegionCommand;->end:I
+
+    const/16 v1, 0x29
+
+    invoke-static {v0, p0, v1}, LG2/u;->i(Ljava/lang/StringBuilder;IC)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

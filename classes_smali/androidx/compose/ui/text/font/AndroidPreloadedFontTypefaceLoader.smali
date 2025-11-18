@@ -1,0 +1,115 @@
+.class final Landroidx/compose/ui/text/font/AndroidPreloadedFontTypefaceLoader;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroidx/compose/ui/text/font/AndroidFont$TypefaceLoader;
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000(\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\u0002\n\u0002\u0010\u0001\n\u0002\b\u0003\bÂ\u0002\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J!\u0010\t\u001a\u0004\u0018\u00010\b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0016¢\u0006\u0004\b\t\u0010\nJ \u0010\f\u001a\u00020\u000b2\u0006\u0010\u0005\u001a\u00020\u00042\u0006\u0010\u0007\u001a\u00020\u0006H\u0096@¢\u0006\u0004\b\f\u0010\r¨\u0006\u000e"
+    }
+    d2 = {
+        "Landroidx/compose/ui/text/font/AndroidPreloadedFontTypefaceLoader;",
+        "Landroidx/compose/ui/text/font/AndroidFont$TypefaceLoader;",
+        "<init>",
+        "()V",
+        "Landroid/content/Context;",
+        "context",
+        "Landroidx/compose/ui/text/font/AndroidFont;",
+        "font",
+        "Landroid/graphics/Typeface;",
+        "loadBlocking",
+        "(Landroid/content/Context;Landroidx/compose/ui/text/font/AndroidFont;)Landroid/graphics/Typeface;",
+        "",
+        "awaitLoad",
+        "(Landroid/content/Context;Landroidx/compose/ui/text/font/AndroidFont;Lz3/d;)Ljava/lang/Object;",
+        "ui-text_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final INSTANCE:Landroidx/compose/ui/text/font/AndroidPreloadedFontTypefaceLoader;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Landroidx/compose/ui/text/font/AndroidPreloadedFontTypefaceLoader;
+
+    invoke-direct {v0}, Landroidx/compose/ui/text/font/AndroidPreloadedFontTypefaceLoader;-><init>()V
+
+    sput-object v0, Landroidx/compose/ui/text/font/AndroidPreloadedFontTypefaceLoader;->INSTANCE:Landroidx/compose/ui/text/font/AndroidPreloadedFontTypefaceLoader;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public awaitLoad(Landroid/content/Context;Landroidx/compose/ui/text/font/AndroidFont;Lz3/d;)Ljava/lang/Object;
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroid/content/Context;",
+            "Landroidx/compose/ui/text/font/AndroidFont;",
+            "Lz3/d;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    const-string p1, "All preloaded fonts are blocking."
+
+    invoke-direct {p0, p1}, Ljava/lang/UnsupportedOperationException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public loadBlocking(Landroid/content/Context;Landroidx/compose/ui/text/font/AndroidFont;)Landroid/graphics/Typeface;
+    .registers 4
+
+    instance-of p0, p2, Landroidx/compose/ui/text/font/AndroidPreloadedFont;
+
+    const/4 v0, 0x0
+
+    if-eqz p0, :cond_8
+
+    check-cast p2, Landroidx/compose/ui/text/font/AndroidPreloadedFont;
+
+    goto :goto_9
+
+    :cond_8
+    move-object p2, v0
+
+    :goto_9
+    if-eqz p2, :cond_f
+
+    invoke-virtual {p2, p1}, Landroidx/compose/ui/text/font/AndroidPreloadedFont;->loadCached$ui_text_release(Landroid/content/Context;)Landroid/graphics/Typeface;
+
+    move-result-object v0
+
+    :cond_f
+    return-object v0
+.end method

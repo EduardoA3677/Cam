@@ -1,0 +1,123 @@
+.class final Landroidx/compose/animation/AnimatedVisibilityKt$AnimatedEnterExitImpl$1$1$1;
+.super Lkotlin/jvm/internal/q;
+.source "SourceFile"
+
+# interfaces
+.implements LJ3/a;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/compose/animation/AnimatedVisibilityKt$AnimatedEnterExitImpl$1$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Lkotlin/jvm/internal/q;",
+        "LJ3/a;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    k = 0x3
+    mv = {
+        0x1,
+        0x6,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# instance fields
+.field final synthetic $childTransition:Landroidx/compose/animation/core/Transition;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/compose/animation/core/Transition<",
+            "Landroidx/compose/animation/EnterExitState;",
+            ">;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Landroidx/compose/animation/core/Transition;)V
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/compose/animation/core/Transition<",
+            "Landroidx/compose/animation/EnterExitState;",
+            ">;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Landroidx/compose/animation/AnimatedVisibilityKt$AnimatedEnterExitImpl$1$1$1;->$childTransition:Landroidx/compose/animation/core/Transition;
+
+    const/4 p1, 0x0
+
+    invoke-direct {p0, p1}, Lkotlin/jvm/internal/q;-><init>(I)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invoke()Ljava/lang/Boolean;
+    .registers 3
+
+    .line 2
+    iget-object v0, p0, Landroidx/compose/animation/AnimatedVisibilityKt$AnimatedEnterExitImpl$1$1$1;->$childTransition:Landroidx/compose/animation/core/Transition;
+
+    invoke-virtual {v0}, Landroidx/compose/animation/core/Transition;->getCurrentState()Ljava/lang/Object;
+
+    move-result-object v0
+
+    sget-object v1, Landroidx/compose/animation/EnterExitState;->Visible:Landroidx/compose/animation/EnterExitState;
+
+    if-eq v0, v1, :cond_15
+
+    .line 3
+    iget-object p0, p0, Landroidx/compose/animation/AnimatedVisibilityKt$AnimatedEnterExitImpl$1$1$1;->$childTransition:Landroidx/compose/animation/core/Transition;
+
+    invoke-virtual {p0}, Landroidx/compose/animation/core/Transition;->getTargetState()Ljava/lang/Object;
+
+    move-result-object p0
+
+    if-ne p0, v1, :cond_13
+
+    goto :goto_15
+
+    :cond_13
+    const/4 p0, 0x0
+
+    goto :goto_16
+
+    :cond_15
+    :goto_15
+    const/4 p0, 0x1
+
+    :goto_16
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public bridge synthetic invoke()Ljava/lang/Object;
+    .registers 1
+
+    .line 1
+    invoke-virtual {p0}, Landroidx/compose/animation/AnimatedVisibilityKt$AnimatedEnterExitImpl$1$1$1;->invoke()Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    return-object p0
+.end method
