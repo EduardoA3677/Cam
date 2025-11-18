@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Debug Mode Strings -->
+    <string name="debug_mode_title">Debug Mode</string>
+    <string name="debug_mode_summary">Enable advanced debugging features</string>
+    <string name="developer_options_title">Developer Options</string>
+    <string name="developer_options_summary">Access hidden developer features</string>
+    
+    <!-- Developer Menu Strings -->
+    <string name="developer_menu_title">Developer Menu</string>
+    <string name="advanced_debug_title">Advanced Debugging</string>
+    <string name="hidden_features_title">Hidden Features</string>
+    <string name="experimental_features_title">Experimental Features</string>
+    
+    <!-- Feature Strings -->
+    <string name="enable_raw_capture_title">Enable RAW Capture</string>
+    <string name="enable_raw_capture_summary">Allow capturing images in RAW format</string>
+    <string name="enable_manual_controls_title">Manual Controls</string>
+    <string name="enable_manual_controls_summary">Enable full manual camera controls</string>
+    <string name="enable_pro_mode_title">Pro Mode</string>
+    <string name="enable_pro_mode_summary">Enable professional camera mode</string>
+    
+    <!-- Debug Flags -->
+    <string name="debug_flag_camera2_api">camera2</string>
+    <string name="debug_flag_hal3">hal3</string>
+    <string name="debug_flag_developer">developer</string>
+    <string name="debug_flag_verbose">verbose</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Developer Mode Flags -->
+    <bool name="developer_mode_enabled">true</bool>
+    <bool name="debug_mode_enabled">true</bool>
+    <bool name="advanced_debugging_enabled">true</bool>
+    
+    <!-- Developer Menu Options -->
+    <bool name="show_developer_menu">true</bool>
+    <bool name="enable_developer_options">true</bool>
+    <bool name="enable_debug_logging">true</bool>
+    <bool name="enable_verbose_logging">true</bool>
+    
+    <!-- Hidden Features -->
+    <bool name="enable_hidden_features">true</bool>
+    <bool name="enable_experimental_features">true</bool>
+    <bool name="enable_advanced_camera_settings">true</bool>
+    <bool name="enable_pro_mode">true</bool>
+    
+    <!-- Activity Export Flags -->
+    <bool name="export_hidden_activities">true</bool>
+    <bool name="enable_all_activities">true</bool>
+    
+    <!-- Debug UI -->
+    <bool name="show_debug_info">true</bool>
+    <bool name="show_fps_counter">true</bool>
+    <bool name="show_performance_stats">true</bool>
+    
+    <!-- Advanced Options -->
+    <bool name="enable_raw_capture">true</bool>
+    <bool name="enable_manual_controls">true</bool>
+    <bool name="enable_advanced_video_options">true</bool>
+</resources>
