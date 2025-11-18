@@ -1,0 +1,108 @@
+.class final Landroidx/lifecycle/FlowLiveDataConversions$asLiveData$1$1;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lf5/k;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/lifecycle/FlowLiveDataConversions$asLiveData$1;->invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "<T:",
+        "Ljava/lang/Object;",
+        ">",
+        "Ljava/lang/Object;",
+        "Lf5/k;"
+    }
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000\f\n\u0002\b\u0002\n\u0002\u0018\u0002\n\u0002\b\u0003\u0010\u0005\u001a\u00020\u0002\"\u0004\b\u0000\u0010\u00002\u0006\u0010\u0001\u001a\u00028\u0000H\u008a@¢\u0006\u0004\b\u0003\u0010\u0004"
+    }
+    d2 = {
+        "T",
+        "it",
+        "Lv3/o;",
+        "emit",
+        "(Ljava/lang/Object;Lz3/d;)Ljava/lang/Object;",
+        "<anonymous>"
+    }
+    k = 0x3
+    mv = {
+        0x1,
+        0x8,
+        0x0
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic $$this$liveData:Landroidx/lifecycle/LiveDataScope;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/lifecycle/LiveDataScope<",
+            "TT;>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method public constructor <init>(Landroidx/lifecycle/LiveDataScope;)V
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Landroidx/lifecycle/LiveDataScope<",
+            "TT;>;)V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Landroidx/lifecycle/FlowLiveDataConversions$asLiveData$1$1;->$$this$liveData:Landroidx/lifecycle/LiveDataScope;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final emit(Ljava/lang/Object;Lz3/d;)Ljava/lang/Object;
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(TT;",
+            "Lz3/d;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    iget-object p0, p0, Landroidx/lifecycle/FlowLiveDataConversions$asLiveData$1$1;->$$this$liveData:Landroidx/lifecycle/LiveDataScope;
+
+    invoke-interface {p0, p1, p2}, Landroidx/lifecycle/LiveDataScope;->emit(Ljava/lang/Object;Lz3/d;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    sget-object p1, LA3/a;->COROUTINE_SUSPENDED:LA3/a;
+
+    if-ne p0, p1, :cond_b
+
+    return-object p0
+
+    :cond_b
+    sget-object p0, Lv3/o;->a:Lv3/o;
+
+    return-object p0
+.end method

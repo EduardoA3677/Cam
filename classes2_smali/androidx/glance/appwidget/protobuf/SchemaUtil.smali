@@ -1,0 +1,3428 @@
+.class final Landroidx/glance/appwidget/protobuf/SchemaUtil;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Landroidx/glance/appwidget/protobuf/CheckReturnValue;
+.end annotation
+
+
+# static fields
+.field private static final DEFAULT_LOOK_UP_START_NUMBER:I = 0x28
+
+.field private static final GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+.end field
+
+.field private static final PROTO2_UNKNOWN_FIELD_SET_SCHEMA:Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "**>;"
+        }
+    .end annotation
+.end field
+
+.field private static final PROTO3_UNKNOWN_FIELD_SET_SCHEMA:Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "**>;"
+        }
+    .end annotation
+.end field
+
+.field private static final UNKNOWN_FIELD_SET_LITE_SCHEMA:Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "**>;"
+        }
+    .end annotation
+.end field
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    invoke-static {}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->getGeneratedMessageClass()Ljava/lang/Class;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/glance/appwidget/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
+
+    const/4 v0, 0x0
+
+    invoke-static {v0}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->getUnknownFieldSetSchema(Z)Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/glance/appwidget/protobuf/SchemaUtil;->PROTO2_UNKNOWN_FIELD_SET_SCHEMA:Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+
+    const/4 v0, 0x1
+
+    invoke-static {v0}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->getUnknownFieldSetSchema(Z)Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+
+    move-result-object v0
+
+    sput-object v0, Landroidx/glance/appwidget/protobuf/SchemaUtil;->PROTO3_UNKNOWN_FIELD_SET_SCHEMA:Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+
+    new-instance v0, Landroidx/glance/appwidget/protobuf/UnknownFieldSetLiteSchema;
+
+    invoke-direct {v0}, Landroidx/glance/appwidget/protobuf/UnknownFieldSetLiteSchema;-><init>()V
+
+    sput-object v0, Landroidx/glance/appwidget/protobuf/SchemaUtil;->UNKNOWN_FIELD_SET_LITE_SCHEMA:Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+.method public static computeSizeBoolList(ILjava/util/List;Z)I
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;Z)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_8
+    if-eqz p2, :cond_14
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_14
+    const/4 p2, 0x1
+
+    invoke-static {p0, p2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeBoolSize(IZ)I
+
+    move-result p0
+
+    mul-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method public static computeSizeBoolListNoTag(Ljava/util/List;)I
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "*>;)I"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static computeSizeByteStringList(ILjava/util/List;)I
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Landroidx/glance/appwidget/protobuf/ByteString;",
+            ">;)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, v0
+
+    :goto_d
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-ge v1, v0, :cond_21
+
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/glance/appwidget/protobuf/ByteString;
+
+    invoke-static {v0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeBytesSizeNoTag(Landroidx/glance/appwidget/protobuf/ByteString;)I
+
+    move-result v0
+
+    add-int/2addr p0, v0
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_d
+
+    :cond_21
+    return p0
+.end method
+
+.method public static computeSizeEnumList(ILjava/util/List;Z)I
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;Z)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_8
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->computeSizeEnumListNoTag(Ljava/util/List;)I
+
+    move-result p1
+
+    if-eqz p2, :cond_18
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_18
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, v0
+
+    add-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method public static computeSizeEnumListNoTag(Ljava/util/List;)I
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;)I"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    instance-of v2, p0, Landroidx/glance/appwidget/protobuf/IntArrayList;
+
+    if-eqz v2, :cond_1d
+
+    check-cast p0, Landroidx/glance/appwidget/protobuf/IntArrayList;
+
+    move v2, v1
+
+    :goto_f
+    if-ge v1, v0, :cond_32
+
+    invoke-virtual {p0, v1}, Landroidx/glance/appwidget/protobuf/IntArrayList;->getInt(I)I
+
+    move-result v3
+
+    invoke-static {v3}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeEnumSizeNoTag(I)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_f
+
+    :cond_1d
+    move v2, v1
+
+    :goto_1e
+    if-ge v1, v0, :cond_32
+
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-static {v3}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeEnumSizeNoTag(I)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1e
+
+    :cond_32
+    return v2
+.end method
+
+.method public static computeSizeFixed32List(ILjava/util/List;Z)I
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;Z)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    const/4 v0, 0x0
+
+    if-nez p1, :cond_8
+
+    return v0
+
+    :cond_8
+    if-eqz p2, :cond_16
+
+    mul-int/lit8 p1, p1, 0x4
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_16
+    invoke-static {p0, v0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeFixed32Size(II)I
+
+    move-result p0
+
+    mul-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method public static computeSizeFixed32ListNoTag(Ljava/util/List;)I
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "*>;)I"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result p0
+
+    mul-int/lit8 p0, p0, 0x4
+
+    return p0
+.end method
+
+.method public static computeSizeFixed64List(ILjava/util/List;Z)I
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;Z)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    if-nez p1, :cond_8
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_8
+    if-eqz p2, :cond_16
+
+    mul-int/lit8 p1, p1, 0x8
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_16
+    const-wide/16 v0, 0x0
+
+    invoke-static {p0, v0, v1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeFixed64Size(IJ)I
+
+    move-result p0
+
+    mul-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method public static computeSizeFixed64ListNoTag(Ljava/util/List;)I
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "*>;)I"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result p0
+
+    mul-int/lit8 p0, p0, 0x8
+
+    return p0
+.end method
+
+.method public static computeSizeGroupList(ILjava/util/List;)I
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Landroidx/glance/appwidget/protobuf/MessageLite;",
+            ">;)I"
+        }
+    .end annotation
+
+    .line 1
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    move v2, v1
+
+    :goto_9
+    if-ge v1, v0, :cond_19
+
+    .line 2
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/glance/appwidget/protobuf/MessageLite;
+
+    invoke-static {p0, v3}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeGroupSize(ILandroidx/glance/appwidget/protobuf/MessageLite;)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_9
+
+    :cond_19
+    return v2
+.end method
+
+.method public static computeSizeGroupList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Schema;)I
+    .registers 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Landroidx/glance/appwidget/protobuf/MessageLite;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Schema;",
+            ")I"
+        }
+    .end annotation
+
+    .line 3
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    move v2, v1
+
+    :goto_9
+    if-ge v1, v0, :cond_19
+
+    .line 4
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroidx/glance/appwidget/protobuf/MessageLite;
+
+    invoke-static {p0, v3, p2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeGroupSize(ILandroidx/glance/appwidget/protobuf/MessageLite;Landroidx/glance/appwidget/protobuf/Schema;)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_9
+
+    :cond_19
+    return v2
+.end method
+
+.method public static computeSizeInt32List(ILjava/util/List;Z)I
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;Z)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_8
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->computeSizeInt32ListNoTag(Ljava/util/List;)I
+
+    move-result p1
+
+    if-eqz p2, :cond_18
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_18
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, v0
+
+    add-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method public static computeSizeInt32ListNoTag(Ljava/util/List;)I
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;)I"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    instance-of v2, p0, Landroidx/glance/appwidget/protobuf/IntArrayList;
+
+    if-eqz v2, :cond_1d
+
+    check-cast p0, Landroidx/glance/appwidget/protobuf/IntArrayList;
+
+    move v2, v1
+
+    :goto_f
+    if-ge v1, v0, :cond_32
+
+    invoke-virtual {p0, v1}, Landroidx/glance/appwidget/protobuf/IntArrayList;->getInt(I)I
+
+    move-result v3
+
+    invoke-static {v3}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_f
+
+    :cond_1d
+    move v2, v1
+
+    :goto_1e
+    if-ge v1, v0, :cond_32
+
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-static {v3}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeInt32SizeNoTag(I)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1e
+
+    :cond_32
+    return v2
+.end method
+
+.method public static computeSizeInt64List(ILjava/util/List;Z)I
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;Z)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_8
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->computeSizeInt64ListNoTag(Ljava/util/List;)I
+
+    move-result v0
+
+    if-eqz p2, :cond_18
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {v0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_18
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result p1
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, p1
+
+    add-int/2addr p0, v0
+
+    return p0
+.end method
+
+.method public static computeSizeInt64ListNoTag(Ljava/util/List;)I
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;)I"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    instance-of v2, p0, Landroidx/glance/appwidget/protobuf/LongArrayList;
+
+    if-eqz v2, :cond_1d
+
+    check-cast p0, Landroidx/glance/appwidget/protobuf/LongArrayList;
+
+    move v2, v1
+
+    :goto_f
+    if-ge v1, v0, :cond_32
+
+    invoke-virtual {p0, v1}, Landroidx/glance/appwidget/protobuf/LongArrayList;->getLong(I)J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeInt64SizeNoTag(J)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_f
+
+    :cond_1d
+    move v2, v1
+
+    :goto_1e
+    if-ge v1, v0, :cond_32
+
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Long;
+
+    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeInt64SizeNoTag(J)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1e
+
+    :cond_32
+    return v2
+.end method
+
+.method public static computeSizeMessage(ILjava/lang/Object;Landroidx/glance/appwidget/protobuf/Schema;)I
+    .registers 4
+
+    instance-of v0, p1, Landroidx/glance/appwidget/protobuf/LazyFieldLite;
+
+    if-eqz v0, :cond_b
+
+    check-cast p1, Landroidx/glance/appwidget/protobuf/LazyFieldLite;
+
+    invoke-static {p0, p1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLazyFieldSize(ILandroidx/glance/appwidget/protobuf/LazyFieldLite;)I
+
+    move-result p0
+
+    return p0
+
+    :cond_b
+    check-cast p1, Landroidx/glance/appwidget/protobuf/MessageLite;
+
+    invoke-static {p0, p1, p2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeMessageSize(ILandroidx/glance/appwidget/protobuf/MessageLite;Landroidx/glance/appwidget/protobuf/Schema;)I
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static computeSizeMessageList(ILjava/util/List;)I
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;)I"
+        }
+    .end annotation
+
+    .line 1
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    .line 2
+    :cond_8
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, v0
+
+    :goto_d
+    if-ge v1, v0, :cond_2a
+
+    .line 3
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    .line 4
+    instance-of v3, v2, Landroidx/glance/appwidget/protobuf/LazyFieldLite;
+
+    if-eqz v3, :cond_20
+
+    .line 5
+    check-cast v2, Landroidx/glance/appwidget/protobuf/LazyFieldLite;
+
+    invoke-static {v2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLazyFieldSizeNoTag(Landroidx/glance/appwidget/protobuf/LazyFieldLite;)I
+
+    move-result v2
+
+    :goto_1d
+    add-int/2addr v2, p0
+
+    move p0, v2
+
+    goto :goto_27
+
+    .line 6
+    :cond_20
+    check-cast v2, Landroidx/glance/appwidget/protobuf/MessageLite;
+
+    invoke-static {v2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeMessageSizeNoTag(Landroidx/glance/appwidget/protobuf/MessageLite;)I
+
+    move-result v2
+
+    goto :goto_1d
+
+    :goto_27
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_d
+
+    :cond_2a
+    return p0
+.end method
+
+.method public static computeSizeMessageList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Schema;)I
+    .registers 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;",
+            "Landroidx/glance/appwidget/protobuf/Schema;",
+            ")I"
+        }
+    .end annotation
+
+    .line 7
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    .line 8
+    :cond_8
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, v0
+
+    :goto_d
+    if-ge v1, v0, :cond_2a
+
+    .line 9
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    .line 10
+    instance-of v3, v2, Landroidx/glance/appwidget/protobuf/LazyFieldLite;
+
+    if-eqz v3, :cond_20
+
+    .line 11
+    check-cast v2, Landroidx/glance/appwidget/protobuf/LazyFieldLite;
+
+    invoke-static {v2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLazyFieldSizeNoTag(Landroidx/glance/appwidget/protobuf/LazyFieldLite;)I
+
+    move-result v2
+
+    :goto_1d
+    add-int/2addr v2, p0
+
+    move p0, v2
+
+    goto :goto_27
+
+    .line 12
+    :cond_20
+    check-cast v2, Landroidx/glance/appwidget/protobuf/MessageLite;
+
+    invoke-static {v2, p2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeMessageSizeNoTag(Landroidx/glance/appwidget/protobuf/MessageLite;Landroidx/glance/appwidget/protobuf/Schema;)I
+
+    move-result v2
+
+    goto :goto_1d
+
+    :goto_27
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_d
+
+    :cond_2a
+    return p0
+.end method
+
+.method public static computeSizeSInt32List(ILjava/util/List;Z)I
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;Z)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_8
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->computeSizeSInt32ListNoTag(Ljava/util/List;)I
+
+    move-result p1
+
+    if-eqz p2, :cond_18
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_18
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, v0
+
+    add-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method public static computeSizeSInt32ListNoTag(Ljava/util/List;)I
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;)I"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    instance-of v2, p0, Landroidx/glance/appwidget/protobuf/IntArrayList;
+
+    if-eqz v2, :cond_1d
+
+    check-cast p0, Landroidx/glance/appwidget/protobuf/IntArrayList;
+
+    move v2, v1
+
+    :goto_f
+    if-ge v1, v0, :cond_32
+
+    invoke-virtual {p0, v1}, Landroidx/glance/appwidget/protobuf/IntArrayList;->getInt(I)I
+
+    move-result v3
+
+    invoke-static {v3}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeSInt32SizeNoTag(I)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_f
+
+    :cond_1d
+    move v2, v1
+
+    :goto_1e
+    if-ge v1, v0, :cond_32
+
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-static {v3}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeSInt32SizeNoTag(I)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1e
+
+    :cond_32
+    return v2
+.end method
+
+.method public static computeSizeSInt64List(ILjava/util/List;Z)I
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;Z)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_8
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->computeSizeSInt64ListNoTag(Ljava/util/List;)I
+
+    move-result p1
+
+    if-eqz p2, :cond_18
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_18
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, v0
+
+    add-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method public static computeSizeSInt64ListNoTag(Ljava/util/List;)I
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;)I"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    instance-of v2, p0, Landroidx/glance/appwidget/protobuf/LongArrayList;
+
+    if-eqz v2, :cond_1d
+
+    check-cast p0, Landroidx/glance/appwidget/protobuf/LongArrayList;
+
+    move v2, v1
+
+    :goto_f
+    if-ge v1, v0, :cond_32
+
+    invoke-virtual {p0, v1}, Landroidx/glance/appwidget/protobuf/LongArrayList;->getLong(I)J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeSInt64SizeNoTag(J)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_f
+
+    :cond_1d
+    move v2, v1
+
+    :goto_1e
+    if-ge v1, v0, :cond_32
+
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Long;
+
+    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeSInt64SizeNoTag(J)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1e
+
+    :cond_32
+    return v2
+.end method
+
+.method public static computeSizeStringList(ILjava/util/List;)I
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, v0
+
+    instance-of v2, p1, Landroidx/glance/appwidget/protobuf/LazyStringList;
+
+    if-eqz v2, :cond_30
+
+    check-cast p1, Landroidx/glance/appwidget/protobuf/LazyStringList;
+
+    :goto_13
+    if-ge v1, v0, :cond_4d
+
+    invoke-interface {p1, v1}, Landroidx/glance/appwidget/protobuf/LazyStringList;->getRaw(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    instance-of v3, v2, Landroidx/glance/appwidget/protobuf/ByteString;
+
+    if-eqz v3, :cond_26
+
+    check-cast v2, Landroidx/glance/appwidget/protobuf/ByteString;
+
+    invoke-static {v2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeBytesSizeNoTag(Landroidx/glance/appwidget/protobuf/ByteString;)I
+
+    move-result v2
+
+    :goto_23
+    add-int/2addr v2, p0
+
+    move p0, v2
+
+    goto :goto_2d
+
+    :cond_26
+    check-cast v2, Ljava/lang/String;
+
+    invoke-static {v2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeStringSizeNoTag(Ljava/lang/String;)I
+
+    move-result v2
+
+    goto :goto_23
+
+    :goto_2d
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_13
+
+    :cond_30
+    :goto_30
+    if-ge v1, v0, :cond_4d
+
+    invoke-interface {p1, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v2
+
+    instance-of v3, v2, Landroidx/glance/appwidget/protobuf/ByteString;
+
+    if-eqz v3, :cond_43
+
+    check-cast v2, Landroidx/glance/appwidget/protobuf/ByteString;
+
+    invoke-static {v2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeBytesSizeNoTag(Landroidx/glance/appwidget/protobuf/ByteString;)I
+
+    move-result v2
+
+    :goto_40
+    add-int/2addr v2, p0
+
+    move p0, v2
+
+    goto :goto_4a
+
+    :cond_43
+    check-cast v2, Ljava/lang/String;
+
+    invoke-static {v2}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeStringSizeNoTag(Ljava/lang/String;)I
+
+    move-result v2
+
+    goto :goto_40
+
+    :goto_4a
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_30
+
+    :cond_4d
+    return p0
+.end method
+
+.method public static computeSizeUInt32List(ILjava/util/List;Z)I
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;Z)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_8
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->computeSizeUInt32ListNoTag(Ljava/util/List;)I
+
+    move-result p1
+
+    if-eqz p2, :cond_18
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_18
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, v0
+
+    add-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method public static computeSizeUInt32ListNoTag(Ljava/util/List;)I
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;)I"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    instance-of v2, p0, Landroidx/glance/appwidget/protobuf/IntArrayList;
+
+    if-eqz v2, :cond_1d
+
+    check-cast p0, Landroidx/glance/appwidget/protobuf/IntArrayList;
+
+    move v2, v1
+
+    :goto_f
+    if-ge v1, v0, :cond_32
+
+    invoke-virtual {p0, v1}, Landroidx/glance/appwidget/protobuf/IntArrayList;->getInt(I)I
+
+    move-result v3
+
+    invoke-static {v3}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_f
+
+    :cond_1d
+    move v2, v1
+
+    :goto_1e
+    if-ge v1, v0, :cond_32
+
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v3
+
+    invoke-static {v3}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeUInt32SizeNoTag(I)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1e
+
+    :cond_32
+    return v2
+.end method
+
+.method public static computeSizeUInt64List(ILjava/util/List;Z)I
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;Z)I"
+        }
+    .end annotation
+
+    invoke-interface {p1}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    if-nez v0, :cond_8
+
+    const/4 p0, 0x0
+
+    return p0
+
+    :cond_8
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->computeSizeUInt64ListNoTag(Ljava/util/List;)I
+
+    move-result p1
+
+    if-eqz p2, :cond_18
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    invoke-static {p1}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeLengthDelimitedFieldSize(I)I
+
+    move-result p1
+
+    add-int/2addr p1, p0
+
+    return p1
+
+    :cond_18
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeTagSize(I)I
+
+    move-result p0
+
+    mul-int/2addr p0, v0
+
+    add-int/2addr p0, p1
+
+    return p0
+.end method
+
+.method public static computeSizeUInt64ListNoTag(Ljava/util/List;)I
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;)I"
+        }
+    .end annotation
+
+    invoke-interface {p0}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_8
+
+    return v1
+
+    :cond_8
+    instance-of v2, p0, Landroidx/glance/appwidget/protobuf/LongArrayList;
+
+    if-eqz v2, :cond_1d
+
+    check-cast p0, Landroidx/glance/appwidget/protobuf/LongArrayList;
+
+    move v2, v1
+
+    :goto_f
+    if-ge v1, v0, :cond_32
+
+    invoke-virtual {p0, v1}, Landroidx/glance/appwidget/protobuf/LongArrayList;->getLong(I)J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_f
+
+    :cond_1d
+    move v2, v1
+
+    :goto_1e
+    if-ge v1, v0, :cond_32
+
+    invoke-interface {p0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Long;
+
+    invoke-virtual {v3}, Ljava/lang/Long;->longValue()J
+
+    move-result-wide v3
+
+    invoke-static {v3, v4}, Landroidx/glance/appwidget/protobuf/CodedOutputStream;->computeUInt64SizeNoTag(J)I
+
+    move-result v3
+
+    add-int/2addr v2, v3
+
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_1e
+
+    :cond_32
+    return v2
+.end method
+
+.method public static filterUnknownEnumList(Ljava/lang/Object;ILjava/util/List;Landroidx/glance/appwidget/protobuf/Internal$EnumLiteMap;Ljava/lang/Object;Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;)Ljava/lang/Object;
+    .registers 12
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<UT:",
+            "Ljava/lang/Object;",
+            "UB:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Object;",
+            "I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Internal$EnumLiteMap<",
+            "*>;TUB;",
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "TUT;TUB;>;)TUB;"
+        }
+    .end annotation
+
+    if-nez p3, :cond_3
+
+    return-object p4
+
+    .line 1
+    :cond_3
+    instance-of v0, p2, Ljava/util/RandomAccess;
+
+    if-eqz v0, :cond_38
+
+    .line 2
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_d
+    if-ge v1, v0, :cond_2e
+
+    .line 3
+    invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    .line 4
+    invoke-interface {p3, v4}, Landroidx/glance/appwidget/protobuf/Internal$EnumLiteMap;->findValueByNumber(I)Landroidx/glance/appwidget/protobuf/Internal$EnumLite;
+
+    move-result-object v5
+
+    if-eqz v5, :cond_27
+
+    if-eq v1, v2, :cond_24
+
+    .line 5
+    invoke-interface {p2, v2, v3}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    :cond_24
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2b
+
+    .line 6
+    :cond_27
+    invoke-static {p0, p1, v4, p4, p5}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->storeUnknownEnum(Ljava/lang/Object;IILjava/lang/Object;Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;)Ljava/lang/Object;
+
+    move-result-object p4
+
+    :goto_2b
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_d
+
+    :cond_2e
+    if-eq v2, v0, :cond_5a
+
+    .line 7
+    invoke-interface {p2, v2, v0}, Ljava/util/List;->subList(II)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/List;->clear()V
+
+    goto :goto_5a
+
+    .line 8
+    :cond_38
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :cond_3c
+    :goto_3c
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5a
+
+    .line 9
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    .line 10
+    invoke-interface {p3, v0}, Landroidx/glance/appwidget/protobuf/Internal$EnumLiteMap;->findValueByNumber(I)Landroidx/glance/appwidget/protobuf/Internal$EnumLite;
+
+    move-result-object v1
+
+    if-nez v1, :cond_3c
+
+    .line 11
+    invoke-static {p0, p1, v0, p4, p5}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->storeUnknownEnum(Ljava/lang/Object;IILjava/lang/Object;Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;)Ljava/lang/Object;
+
+    move-result-object p4
+
+    .line 12
+    invoke-interface {p2}, Ljava/util/Iterator;->remove()V
+
+    goto :goto_3c
+
+    :cond_5a
+    :goto_5a
+    return-object p4
+.end method
+
+.method public static filterUnknownEnumList(Ljava/lang/Object;ILjava/util/List;Landroidx/glance/appwidget/protobuf/Internal$EnumVerifier;Ljava/lang/Object;Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;)Ljava/lang/Object;
+    .registers 12
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<UT:",
+            "Ljava/lang/Object;",
+            "UB:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Object;",
+            "I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Internal$EnumVerifier;",
+            "TUB;",
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "TUT;TUB;>;)TUB;"
+        }
+    .end annotation
+
+    if-nez p3, :cond_3
+
+    return-object p4
+
+    .line 13
+    :cond_3
+    instance-of v0, p2, Ljava/util/RandomAccess;
+
+    if-eqz v0, :cond_38
+
+    .line 14
+    invoke-interface {p2}, Ljava/util/List;->size()I
+
+    move-result v0
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_d
+    if-ge v1, v0, :cond_2e
+
+    .line 15
+    invoke-interface {p2, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Ljava/lang/Integer;
+
+    invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
+
+    move-result v4
+
+    .line 16
+    invoke-interface {p3, v4}, Landroidx/glance/appwidget/protobuf/Internal$EnumVerifier;->isInRange(I)Z
+
+    move-result v5
+
+    if-eqz v5, :cond_27
+
+    if-eq v1, v2, :cond_24
+
+    .line 17
+    invoke-interface {p2, v2, v3}, Ljava/util/List;->set(ILjava/lang/Object;)Ljava/lang/Object;
+
+    :cond_24
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_2b
+
+    .line 18
+    :cond_27
+    invoke-static {p0, p1, v4, p4, p5}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->storeUnknownEnum(Ljava/lang/Object;IILjava/lang/Object;Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;)Ljava/lang/Object;
+
+    move-result-object p4
+
+    :goto_2b
+    add-int/lit8 v1, v1, 0x1
+
+    goto :goto_d
+
+    :cond_2e
+    if-eq v2, v0, :cond_5a
+
+    .line 19
+    invoke-interface {p2, v2, v0}, Ljava/util/List;->subList(II)Ljava/util/List;
+
+    move-result-object p0
+
+    invoke-interface {p0}, Ljava/util/List;->clear()V
+
+    goto :goto_5a
+
+    .line 20
+    :cond_38
+    invoke-interface {p2}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p2
+
+    :cond_3c
+    :goto_3c
+    invoke-interface {p2}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_5a
+
+    .line 21
+    invoke-interface {p2}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Ljava/lang/Integer;
+
+    invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
+
+    move-result v0
+
+    .line 22
+    invoke-interface {p3, v0}, Landroidx/glance/appwidget/protobuf/Internal$EnumVerifier;->isInRange(I)Z
+
+    move-result v1
+
+    if-nez v1, :cond_3c
+
+    .line 23
+    invoke-static {p0, p1, v0, p4, p5}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->storeUnknownEnum(Ljava/lang/Object;IILjava/lang/Object;Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;)Ljava/lang/Object;
+
+    move-result-object p4
+
+    .line 24
+    invoke-interface {p2}, Ljava/util/Iterator;->remove()V
+
+    goto :goto_3c
+
+    :cond_5a
+    :goto_5a
+    return-object p4
+.end method
+
+.method private static getGeneratedMessageClass()Ljava/lang/Class;
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+
+    :try_start_0
+    const-string v0, "androidx.glance.appwidget.protobuf.GeneratedMessageV3"
+
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+    :try_end_6
+    .catchall {:try_start_0 .. :try_end_6} :catchall_7
+
+    return-object v0
+
+    :catchall_7
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public static getMapDefaultEntry(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Object;
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;",
+            "Ljava/lang/String;",
+            ")",
+            "Ljava/lang/Object;"
+        }
+    .end annotation
+
+    const-string v0, "Unable to look up map field default entry holder class for "
+
+    :try_start_2
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v2, "$"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const/4 v2, 0x1
+
+    invoke-static {p1, v2}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->toCamelCase(Ljava/lang/String;Z)Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v3, "DefaultEntryHolder"
+
+    invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-static {v1}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/Class;->getDeclaredFields()[Ljava/lang/reflect/Field;
+
+    move-result-object v1
+
+    array-length v3, v1
+
+    if-ne v3, v2, :cond_39
+
+    const/4 p0, 0x0
+
+    aget-object p0, v1, p0
+
+    invoke-static {p0}, Landroidx/glance/appwidget/protobuf/UnsafeUtil;->getStaticObject(Ljava/lang/reflect/Field;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    return-object p0
+
+    :catchall_37
+    move-exception p0
+
+    goto :goto_57
+
+    :cond_39
+    new-instance v1, Ljava/lang/IllegalStateException;
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2, v0}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string p1, " in "
+
+    invoke-virtual {v2, p1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {p0}, Ljava/lang/Class;->getName()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-virtual {v2, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    invoke-direct {v1, p0}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw v1
+    :try_end_57
+    .catchall {:try_start_2 .. :try_end_57} :catchall_37
+
+    :goto_57
+    new-instance p1, Ljava/lang/RuntimeException;
+
+    invoke-direct {p1, p0}, Ljava/lang/RuntimeException;-><init>(Ljava/lang/Throwable;)V
+
+    throw p1
+.end method
+
+.method private static getUnknownFieldSetSchema(Z)Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(Z)",
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "**>;"
+        }
+    .end annotation
+
+    const/4 v0, 0x0
+
+    :try_start_1
+    invoke-static {}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->getUnknownFieldSetSchemaClass()Ljava/lang/Class;
+
+    move-result-object v1
+
+    if-nez v1, :cond_8
+
+    return-object v0
+
+    :cond_8
+    sget-object v2, Ljava/lang/Boolean;->TYPE:Ljava/lang/Class;
+
+    filled-new-array {v2}, [Ljava/lang/Class;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
+
+    move-result-object v1
+
+    invoke-static {p0}, Ljava/lang/Boolean;->valueOf(Z)Ljava/lang/Boolean;
+
+    move-result-object p0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-virtual {v1, p0}, Ljava/lang/reflect/Constructor;->newInstance([Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    check-cast p0, Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+    :try_end_20
+    .catchall {:try_start_1 .. :try_end_20} :catchall_21
+
+    return-object p0
+
+    :catchall_21
+    return-object v0
+.end method
+
+.method private static getUnknownFieldSetSchemaClass()Ljava/lang/Class;
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Ljava/lang/Class<",
+            "*>;"
+        }
+    .end annotation
+
+    :try_start_0
+    const-string v0, "androidx.glance.appwidget.protobuf.UnknownFieldSetSchema"
+
+    invoke-static {v0}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
+
+    move-result-object v0
+    :try_end_6
+    .catchall {:try_start_0 .. :try_end_6} :catchall_7
+
+    return-object v0
+
+    :catchall_7
+    const/4 v0, 0x0
+
+    return-object v0
+.end method
+
+.method public static mergeExtensions(Landroidx/glance/appwidget/protobuf/ExtensionSchema;Ljava/lang/Object;Ljava/lang/Object;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            "FT::",
+            "Landroidx/glance/appwidget/protobuf/FieldSet$FieldDescriptorLite<",
+            "TFT;>;>(",
+            "Landroidx/glance/appwidget/protobuf/ExtensionSchema<",
+            "TFT;>;TT;TT;)V"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p2}, Landroidx/glance/appwidget/protobuf/ExtensionSchema;->getExtensions(Ljava/lang/Object;)Landroidx/glance/appwidget/protobuf/FieldSet;
+
+    move-result-object p2
+
+    invoke-virtual {p2}, Landroidx/glance/appwidget/protobuf/FieldSet;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_11
+
+    invoke-virtual {p0, p1}, Landroidx/glance/appwidget/protobuf/ExtensionSchema;->getMutableExtensions(Ljava/lang/Object;)Landroidx/glance/appwidget/protobuf/FieldSet;
+
+    move-result-object p0
+
+    invoke-virtual {p0, p2}, Landroidx/glance/appwidget/protobuf/FieldSet;->mergeFrom(Landroidx/glance/appwidget/protobuf/FieldSet;)V
+
+    :cond_11
+    return-void
+.end method
+
+.method public static mergeMap(Landroidx/glance/appwidget/protobuf/MapFieldSchema;Ljava/lang/Object;Ljava/lang/Object;J)V
+    .registers 6
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/glance/appwidget/protobuf/MapFieldSchema;",
+            "TT;TT;J)V"
+        }
+    .end annotation
+
+    invoke-static {p1, p3, p4}, Landroidx/glance/appwidget/protobuf/UnsafeUtil;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-static {p2, p3, p4}, Landroidx/glance/appwidget/protobuf/UnsafeUtil;->getObject(Ljava/lang/Object;J)Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-interface {p0, v0, p2}, Landroidx/glance/appwidget/protobuf/MapFieldSchema;->mergeFrom(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {p1, p3, p4, p0}, Landroidx/glance/appwidget/protobuf/UnsafeUtil;->putObject(Ljava/lang/Object;JLjava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static mergeUnknownFields(Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;Ljava/lang/Object;Ljava/lang/Object;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<T:",
+            "Ljava/lang/Object;",
+            "UT:",
+            "Ljava/lang/Object;",
+            "UB:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "TUT;TUB;>;TT;TT;)V"
+        }
+    .end annotation
+
+    invoke-virtual {p0, p1}, Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;->getFromMessage(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v0
+
+    invoke-virtual {p0, p2}, Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;->getFromMessage(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-virtual {p0, v0, p2}, Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;->merge(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p2
+
+    invoke-virtual {p0, p1, p2}, Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;->setToMessage(Ljava/lang/Object;Ljava/lang/Object;)V
+
+    return-void
+.end method
+
+.method public static proto2UnknownFieldSetSchema()Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "**>;"
+        }
+    .end annotation
+
+    sget-object v0, Landroidx/glance/appwidget/protobuf/SchemaUtil;->PROTO2_UNKNOWN_FIELD_SET_SCHEMA:Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+
+    return-object v0
+.end method
+
+.method public static proto3UnknownFieldSetSchema()Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "**>;"
+        }
+    .end annotation
+
+    sget-object v0, Landroidx/glance/appwidget/protobuf/SchemaUtil;->PROTO3_UNKNOWN_FIELD_SET_SCHEMA:Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+
+    return-object v0
+.end method
+
+.method public static requireGeneratedMessage(Ljava/lang/Class;)V
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/lang/Class<",
+            "*>;)V"
+        }
+    .end annotation
+
+    const-class v0, Landroidx/glance/appwidget/protobuf/GeneratedMessageLite;
+
+    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result v0
+
+    if-nez v0, :cond_1b
+
+    sget-object v0, Landroidx/glance/appwidget/protobuf/SchemaUtil;->GENERATED_MESSAGE_CLASS:Ljava/lang/Class;
+
+    if-eqz v0, :cond_1b
+
+    invoke-virtual {v0, p0}, Ljava/lang/Class;->isAssignableFrom(Ljava/lang/Class;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_13
+
+    goto :goto_1b
+
+    :cond_13
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Message classes must extend GeneratedMessageV3 or GeneratedMessageLite"
+
+    invoke-direct {p0, v0}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_1b
+    :goto_1b
+    return-void
+.end method
+
+.method public static safeEquals(Ljava/lang/Object;Ljava/lang/Object;)Z
+    .registers 2
+
+    if-eq p0, p1, :cond_d
+
+    if-eqz p0, :cond_b
+
+    invoke-virtual {p0, p1}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
+
+    move-result p0
+
+    if-eqz p0, :cond_b
+
+    goto :goto_d
+
+    :cond_b
+    const/4 p0, 0x0
+
+    goto :goto_e
+
+    :cond_d
+    :goto_d
+    const/4 p0, 0x1
+
+    :goto_e
+    return p0
+.end method
+
+.method public static shouldUseTableSwitch(III)Z
+    .registers 13
+
+    .line 1
+    const/16 v0, 0x28
+
+    const/4 v1, 0x1
+
+    if-ge p1, v0, :cond_6
+
+    return v1
+
+    :cond_6
+    int-to-long v2, p1
+
+    int-to-long p0, p0
+
+    sub-long/2addr v2, p0
+
+    int-to-long p0, p2
+
+    const-wide/16 v4, 0x2
+
+    mul-long/2addr v4, p0
+
+    const-wide/16 v6, 0x3
+
+    add-long/2addr v4, v6
+
+    add-long/2addr p0, v6
+
+    const-wide/16 v8, 0xa
+
+    add-long/2addr v2, v8
+
+    mul-long/2addr p0, v6
+
+    add-long/2addr p0, v4
+
+    cmp-long p0, v2, p0
+
+    if-gtz p0, :cond_1b
+
+    goto :goto_1c
+
+    :cond_1b
+    const/4 v1, 0x0
+
+    :goto_1c
+    return v1
+.end method
+
+.method public static shouldUseTableSwitch([Landroidx/glance/appwidget/protobuf/FieldInfo;)Z
+    .registers 3
+
+    .line 2
+    array-length v0, p0
+
+    const/4 v1, 0x0
+
+    if-nez v0, :cond_5
+
+    return v1
+
+    .line 3
+    :cond_5
+    aget-object v0, p0, v1
+
+    invoke-virtual {v0}, Landroidx/glance/appwidget/protobuf/FieldInfo;->getFieldNumber()I
+
+    move-result v0
+
+    .line 4
+    array-length v1, p0
+
+    add-int/lit8 v1, v1, -0x1
+
+    aget-object v1, p0, v1
+
+    invoke-virtual {v1}, Landroidx/glance/appwidget/protobuf/FieldInfo;->getFieldNumber()I
+
+    move-result v1
+
+    .line 5
+    array-length p0, p0
+
+    invoke-static {v0, v1, p0}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->shouldUseTableSwitch(III)Z
+
+    move-result p0
+
+    return p0
+.end method
+
+.method public static storeUnknownEnum(Ljava/lang/Object;IILjava/lang/Object;Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;)Ljava/lang/Object;
+    .registers 7
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<UT:",
+            "Ljava/lang/Object;",
+            "UB:",
+            "Ljava/lang/Object;",
+            ">(",
+            "Ljava/lang/Object;",
+            "IITUB;",
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "TUT;TUB;>;)TUB;"
+        }
+    .end annotation
+
+    if-nez p3, :cond_6
+
+    invoke-virtual {p4, p0}, Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;->getBuilderFromMessage(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p3
+
+    :cond_6
+    int-to-long v0, p2
+
+    invoke-virtual {p4, p3, p1, v0, v1}, Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;->addVarint(Ljava/lang/Object;IJ)V
+
+    return-object p3
+.end method
+
+.method public static toCamelCase(Ljava/lang/String;Z)Ljava/lang/String;
+    .registers 7
+
+    new-instance v0, Ljava/lang/StringBuilder;
+
+    invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
+
+    const/4 v1, 0x0
+
+    move v2, v1
+
+    :goto_7
+    invoke-virtual {p0}, Ljava/lang/String;->length()I
+
+    move-result v3
+
+    if-ge v2, v3, :cond_4e
+
+    invoke-virtual {p0, v2}, Ljava/lang/String;->charAt(I)C
+
+    move-result v3
+
+    const/16 v4, 0x61
+
+    if-gt v4, v3, :cond_27
+
+    const/16 v4, 0x7a
+
+    if-gt v3, v4, :cond_27
+
+    if-eqz p1, :cond_22
+
+    add-int/lit8 v3, v3, -0x20
+
+    int-to-char p1, v3
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_25
+
+    :cond_22
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :goto_25
+    move p1, v1
+
+    goto :goto_4b
+
+    :cond_27
+    const/16 v4, 0x41
+
+    if-gt v4, v3, :cond_3e
+
+    const/16 v4, 0x5a
+
+    if-gt v3, v4, :cond_3e
+
+    if-nez v2, :cond_3a
+
+    if-nez p1, :cond_3a
+
+    add-int/lit8 v3, v3, 0x20
+
+    int-to-char p1, v3
+
+    invoke-virtual {v0, p1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_25
+
+    :cond_3a
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    goto :goto_25
+
+    :cond_3e
+    const/16 p1, 0x30
+
+    const/4 v4, 0x1
+
+    if-gt p1, v3, :cond_4a
+
+    const/16 p1, 0x39
+
+    if-gt v3, p1, :cond_4a
+
+    invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
+
+    :cond_4a
+    move p1, v4
+
+    :goto_4b
+    add-int/lit8 v2, v2, 0x1
+
+    goto :goto_7
+
+    :cond_4e
+    invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+.method public static unknownFieldSetLiteSchema()Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+    .registers 1
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()",
+            "Landroidx/glance/appwidget/protobuf/UnknownFieldSchema<",
+            "**>;"
+        }
+    .end annotation
+
+    sget-object v0, Landroidx/glance/appwidget/protobuf/SchemaUtil;->UNKNOWN_FIELD_SET_LITE_SCHEMA:Landroidx/glance/appwidget/protobuf/UnknownFieldSchema;
+
+    return-object v0
+.end method
+
+.method public static writeBool(IZLandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 3
+
+    if-eqz p1, :cond_6
+
+    const/4 p1, 0x1
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeBool(IZ)V
+
+    :cond_6
+    return-void
+.end method
+
+.method public static writeBoolList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Boolean;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeBoolList(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeBytes(ILandroidx/glance/appwidget/protobuf/ByteString;Landroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 4
+
+    if-eqz p1, :cond_b
+
+    invoke-virtual {p1}, Landroidx/glance/appwidget/protobuf/ByteString;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeBytes(ILandroidx/glance/appwidget/protobuf/ByteString;)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeBytesList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Landroidx/glance/appwidget/protobuf/ByteString;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            ")V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeBytesList(ILjava/util/List;)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeDouble(IDLandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 8
+
+    invoke-static {p1, p2}, Ljava/lang/Double;->doubleToRawLongBits(D)J
+
+    move-result-wide v0
+
+    const-wide/16 v2, 0x0
+
+    cmp-long v0, v0, v2
+
+    if-eqz v0, :cond_d
+
+    invoke-interface {p3, p0, p1, p2}, Landroidx/glance/appwidget/protobuf/Writer;->writeDouble(ID)V
+
+    :cond_d
+    return-void
+.end method
+
+.method public static writeDoubleList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Double;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeDoubleList(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeEnum(IILandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 3
+
+    if-eqz p1, :cond_5
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeEnum(II)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public static writeEnumList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeEnumList(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeFixed32(IILandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 3
+
+    if-eqz p1, :cond_5
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeFixed32(II)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public static writeFixed32List(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeFixed32List(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeFixed64(IJLandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 6
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {p3, p0, p1, p2}, Landroidx/glance/appwidget/protobuf/Writer;->writeFixed64(IJ)V
+
+    :cond_9
+    return-void
+.end method
+
+.method public static writeFixed64List(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeFixed64List(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeFloat(IFLandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 4
+
+    invoke-static {p1}, Ljava/lang/Float;->floatToRawIntBits(F)I
+
+    move-result v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeFloat(IF)V
+
+    :cond_9
+    return-void
+.end method
+
+.method public static writeFloatList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Float;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeFloatList(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeGroupList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            ")V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    .line 1
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    .line 2
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeGroupList(ILjava/util/List;)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeGroupList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Landroidx/glance/appwidget/protobuf/Schema;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Landroidx/glance/appwidget/protobuf/Schema;",
+            ")V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    .line 3
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    .line 4
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeGroupList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Schema;)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeInt32(IILandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 3
+
+    if-eqz p1, :cond_5
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeInt32(II)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public static writeInt32List(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeInt32List(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeInt64(IJLandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 6
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {p3, p0, p1, p2}, Landroidx/glance/appwidget/protobuf/Writer;->writeInt64(IJ)V
+
+    :cond_9
+    return-void
+.end method
+
+.method public static writeInt64List(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeInt64List(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeLazyFieldList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            ")V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_1c
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_1c
+
+    invoke-interface {p1}, Ljava/util/List;->iterator()Ljava/util/Iterator;
+
+    move-result-object p1
+
+    :goto_c
+    invoke-interface {p1}, Ljava/util/Iterator;->hasNext()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_1c
+
+    invoke-interface {p1}, Ljava/util/Iterator;->next()Ljava/lang/Object;
+
+    move-result-object v0
+
+    check-cast v0, Landroidx/glance/appwidget/protobuf/LazyFieldLite;
+
+    invoke-virtual {v0, p2, p0}, Landroidx/glance/appwidget/protobuf/LazyFieldLite;->writeTo(Landroidx/glance/appwidget/protobuf/Writer;I)V
+
+    goto :goto_c
+
+    :cond_1c
+    return-void
+.end method
+
+.method public static writeMessage(ILjava/lang/Object;Landroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 3
+
+    if-eqz p1, :cond_5
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeMessage(ILjava/lang/Object;)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public static writeMessageList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            ")V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    .line 1
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    .line 2
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeMessageList(ILjava/util/List;)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeMessageList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Landroidx/glance/appwidget/protobuf/Schema;)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "*>;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Landroidx/glance/appwidget/protobuf/Schema;",
+            ")V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    .line 3
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    .line 4
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeMessageList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Schema;)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeSFixed32(IILandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 3
+
+    if-eqz p1, :cond_5
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeSFixed32(II)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public static writeSFixed32List(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeSFixed32List(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeSFixed64(IJLandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 6
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {p3, p0, p1, p2}, Landroidx/glance/appwidget/protobuf/Writer;->writeSFixed64(IJ)V
+
+    :cond_9
+    return-void
+.end method
+
+.method public static writeSFixed64List(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeSFixed64List(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeSInt32(IILandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 3
+
+    if-eqz p1, :cond_5
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeSInt32(II)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public static writeSInt32List(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeSInt32List(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeSInt64(IJLandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 6
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {p3, p0, p1, p2}, Landroidx/glance/appwidget/protobuf/Writer;->writeSInt64(IJ)V
+
+    :cond_9
+    return-void
+.end method
+
+.method public static writeSInt64List(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeSInt64List(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeString(ILjava/lang/Object;Landroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 4
+
+    instance-of v0, p1, Ljava/lang/String;
+
+    if-eqz v0, :cond_a
+
+    check-cast p1, Ljava/lang/String;
+
+    invoke-static {p0, p1, p2}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->writeStringInternal(ILjava/lang/String;Landroidx/glance/appwidget/protobuf/Writer;)V
+
+    goto :goto_f
+
+    :cond_a
+    check-cast p1, Landroidx/glance/appwidget/protobuf/ByteString;
+
+    invoke-static {p0, p1, p2}, Landroidx/glance/appwidget/protobuf/SchemaUtil;->writeBytes(ILandroidx/glance/appwidget/protobuf/ByteString;Landroidx/glance/appwidget/protobuf/Writer;)V
+
+    :goto_f
+    return-void
+.end method
+
+.method private static writeStringInternal(ILjava/lang/String;Landroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 4
+
+    if-eqz p1, :cond_b
+
+    invoke-virtual {p1}, Ljava/lang/String;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeString(ILjava/lang/String;)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeStringList(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/String;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            ")V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeStringList(ILjava/util/List;)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeUInt32(IILandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 3
+
+    if-eqz p1, :cond_5
+
+    invoke-interface {p2, p0, p1}, Landroidx/glance/appwidget/protobuf/Writer;->writeUInt32(II)V
+
+    :cond_5
+    return-void
+.end method
+
+.method public static writeUInt32List(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Integer;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeUInt32List(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method
+
+.method public static writeUInt64(IJLandroidx/glance/appwidget/protobuf/Writer;)V
+    .registers 6
+
+    const-wide/16 v0, 0x0
+
+    cmp-long v0, p1, v0
+
+    if-eqz v0, :cond_9
+
+    invoke-interface {p3, p0, p1, p2}, Landroidx/glance/appwidget/protobuf/Writer;->writeUInt64(IJ)V
+
+    :cond_9
+    return-void
+.end method
+
+.method public static writeUInt64List(ILjava/util/List;Landroidx/glance/appwidget/protobuf/Writer;Z)V
+    .registers 5
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(I",
+            "Ljava/util/List<",
+            "Ljava/lang/Long;",
+            ">;",
+            "Landroidx/glance/appwidget/protobuf/Writer;",
+            "Z)V"
+        }
+    .end annotation
+
+    if-eqz p1, :cond_b
+
+    invoke-interface {p1}, Ljava/util/List;->isEmpty()Z
+
+    move-result v0
+
+    if-nez v0, :cond_b
+
+    invoke-interface {p2, p0, p1, p3}, Landroidx/glance/appwidget/protobuf/Writer;->writeUInt64List(ILjava/util/List;Z)V
+
+    :cond_b
+    return-void
+.end method

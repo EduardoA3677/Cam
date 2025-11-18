@@ -1,0 +1,332 @@
+.class public final Landroidx/glance/appwidget/BoxChildSelector;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+
+# annotations
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u00004\n\u0002\u0018\u0002\n\u0002\u0010\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0000\n\u0002\u0018\u0002\n\u0002\b\r\n\u0002\u0010\u000e\n\u0002\b\u0002\n\u0002\u0010\b\n\u0002\b\u0002\n\u0002\u0010\u000b\n\u0002\b\b\b\u0080\b\u0018\u00002\u00020\u0001B\u001f\u0012\u0006\u0010\u0003\u001a\u00020\u0002\u0012\u0006\u0010\u0005\u001a\u00020\u0004\u0012\u0006\u0010\u0007\u001a\u00020\u0006¢\u0006\u0004\b\b\u0010\tJ\u0010\u0010\n\u001a\u00020\u0002HÆ\u0003¢\u0006\u0004\b\n\u0010\u000bJ\u0016\u0010\u000e\u001a\u00020\u0004HÆ\u0003ø\u0001\u0000ø\u0001\u0001¢\u0006\u0004\b\f\u0010\rJ\u0016\u0010\u0010\u001a\u00020\u0006HÆ\u0003ø\u0001\u0000ø\u0001\u0001¢\u0006\u0004\b\u000f\u0010\rJ1\u0010\u0013\u001a\u00020\u00002\b\b\u0002\u0010\u0003\u001a\u00020\u00022\b\b\u0002\u0010\u0005\u001a\u00020\u00042\b\b\u0002\u0010\u0007\u001a\u00020\u0006HÆ\u0001ø\u0001\u0001¢\u0006\u0004\b\u0011\u0010\u0012J\u0010\u0010\u0015\u001a\u00020\u0014HÖ\u0001¢\u0006\u0004\b\u0015\u0010\u0016J\u0010\u0010\u0018\u001a\u00020\u0017HÖ\u0001¢\u0006\u0004\b\u0018\u0010\rJ\u001a\u0010\u001b\u001a\u00020\u001a2\b\u0010\u0019\u001a\u0004\u0018\u00010\u0001HÖ\u0003¢\u0006\u0004\b\u001b\u0010\u001cR\u0017\u0010\u0003\u001a\u00020\u00028\u0006¢\u0006\f\n\u0004\b\u0003\u0010\u001d\u001a\u0004\b\u001e\u0010\u000bR\u001d\u0010\u0005\u001a\u00020\u00048\u0006ø\u0001\u0001ø\u0001\u0000¢\u0006\f\n\u0004\b\u0005\u0010\u001f\u001a\u0004\b \u0010\rR\u001d\u0010\u0007\u001a\u00020\u00068\u0006ø\u0001\u0001ø\u0001\u0000¢\u0006\f\n\u0004\b\u0007\u0010\u001f\u001a\u0004\b!\u0010\r\u0082\u0002\u000b\n\u0002\b!\n\u0005\b¡\u001e0\u0001¨\u0006\""
+    }
+    d2 = {
+        "Landroidx/glance/appwidget/BoxChildSelector;",
+        "",
+        "Landroidx/glance/appwidget/LayoutType;",
+        "type",
+        "Landroidx/glance/layout/Alignment$Horizontal;",
+        "horizontalAlignment",
+        "Landroidx/glance/layout/Alignment$Vertical;",
+        "verticalAlignment",
+        "<init>",
+        "(Landroidx/glance/appwidget/LayoutType;IILkotlin/jvm/internal/h;)V",
+        "component1",
+        "()Landroidx/glance/appwidget/LayoutType;",
+        "component2-PGIyAqw",
+        "()I",
+        "component2",
+        "component3-mnfRV0w",
+        "component3",
+        "copy-vmlqhMs",
+        "(Landroidx/glance/appwidget/LayoutType;II)Landroidx/glance/appwidget/BoxChildSelector;",
+        "copy",
+        "",
+        "toString",
+        "()Ljava/lang/String;",
+        "",
+        "hashCode",
+        "other",
+        "",
+        "equals",
+        "(Ljava/lang/Object;)Z",
+        "Landroidx/glance/appwidget/LayoutType;",
+        "getType",
+        "I",
+        "getHorizontalAlignment-PGIyAqw",
+        "getVerticalAlignment-mnfRV0w",
+        "glance-appwidget_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field public static final $stable:I
+
+
+# instance fields
+.field private final horizontalAlignment:I
+
+.field private final type:Landroidx/glance/appwidget/LayoutType;
+
+.field private final verticalAlignment:I
+
+
+# direct methods
+.method private constructor <init>(Landroidx/glance/appwidget/LayoutType;II)V
+    .registers 5
+
+    const-string v0, "type"
+
+    invoke-static {p1, v0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    .line 2
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    .line 3
+    iput-object p1, p0, Landroidx/glance/appwidget/BoxChildSelector;->type:Landroidx/glance/appwidget/LayoutType;
+
+    .line 4
+    iput p2, p0, Landroidx/glance/appwidget/BoxChildSelector;->horizontalAlignment:I
+
+    .line 5
+    iput p3, p0, Landroidx/glance/appwidget/BoxChildSelector;->verticalAlignment:I
+
+    return-void
+.end method
+
+.method public synthetic constructor <init>(Landroidx/glance/appwidget/LayoutType;IILkotlin/jvm/internal/h;)V
+    .registers 5
+
+    .line 1
+    invoke-direct {p0, p1, p2, p3}, Landroidx/glance/appwidget/BoxChildSelector;-><init>(Landroidx/glance/appwidget/LayoutType;II)V
+
+    return-void
+.end method
+
+.method public static synthetic copy-vmlqhMs$default(Landroidx/glance/appwidget/BoxChildSelector;Landroidx/glance/appwidget/LayoutType;IIILjava/lang/Object;)Landroidx/glance/appwidget/BoxChildSelector;
+    .registers 6
+
+    and-int/lit8 p5, p4, 0x1
+
+    if-eqz p5, :cond_6
+
+    iget-object p1, p0, Landroidx/glance/appwidget/BoxChildSelector;->type:Landroidx/glance/appwidget/LayoutType;
+
+    :cond_6
+    and-int/lit8 p5, p4, 0x2
+
+    if-eqz p5, :cond_c
+
+    iget p2, p0, Landroidx/glance/appwidget/BoxChildSelector;->horizontalAlignment:I
+
+    :cond_c
+    and-int/lit8 p4, p4, 0x4
+
+    if-eqz p4, :cond_12
+
+    iget p3, p0, Landroidx/glance/appwidget/BoxChildSelector;->verticalAlignment:I
+
+    :cond_12
+    invoke-virtual {p0, p1, p2, p3}, Landroidx/glance/appwidget/BoxChildSelector;->copy-vmlqhMs(Landroidx/glance/appwidget/LayoutType;II)Landroidx/glance/appwidget/BoxChildSelector;
+
+    move-result-object p0
+
+    return-object p0
+.end method
+
+
+# virtual methods
+.method public final component1()Landroidx/glance/appwidget/LayoutType;
+    .registers 1
+
+    iget-object p0, p0, Landroidx/glance/appwidget/BoxChildSelector;->type:Landroidx/glance/appwidget/LayoutType;
+
+    return-object p0
+.end method
+
+.method public final component2-PGIyAqw()I
+    .registers 1
+
+    iget p0, p0, Landroidx/glance/appwidget/BoxChildSelector;->horizontalAlignment:I
+
+    return p0
+.end method
+
+.method public final component3-mnfRV0w()I
+    .registers 1
+
+    iget p0, p0, Landroidx/glance/appwidget/BoxChildSelector;->verticalAlignment:I
+
+    return p0
+.end method
+
+.method public final copy-vmlqhMs(Landroidx/glance/appwidget/LayoutType;II)Landroidx/glance/appwidget/BoxChildSelector;
+    .registers 5
+
+    const-string p0, "type"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    new-instance p0, Landroidx/glance/appwidget/BoxChildSelector;
+
+    const/4 v0, 0x0
+
+    invoke-direct {p0, p1, p2, p3, v0}, Landroidx/glance/appwidget/BoxChildSelector;-><init>(Landroidx/glance/appwidget/LayoutType;IILkotlin/jvm/internal/h;)V
+
+    return-object p0
+.end method
+
+.method public equals(Ljava/lang/Object;)Z
+    .registers 6
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_4
+
+    return v0
+
+    :cond_4
+    instance-of v1, p1, Landroidx/glance/appwidget/BoxChildSelector;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_a
+
+    return v2
+
+    :cond_a
+    check-cast p1, Landroidx/glance/appwidget/BoxChildSelector;
+
+    iget-object v1, p0, Landroidx/glance/appwidget/BoxChildSelector;->type:Landroidx/glance/appwidget/LayoutType;
+
+    iget-object v3, p1, Landroidx/glance/appwidget/BoxChildSelector;->type:Landroidx/glance/appwidget/LayoutType;
+
+    if-eq v1, v3, :cond_13
+
+    return v2
+
+    :cond_13
+    iget v1, p0, Landroidx/glance/appwidget/BoxChildSelector;->horizontalAlignment:I
+
+    iget v3, p1, Landroidx/glance/appwidget/BoxChildSelector;->horizontalAlignment:I
+
+    invoke-static {v1, v3}, Landroidx/glance/layout/Alignment$Horizontal;->equals-impl0(II)Z
+
+    move-result v1
+
+    if-nez v1, :cond_1e
+
+    return v2
+
+    :cond_1e
+    iget p0, p0, Landroidx/glance/appwidget/BoxChildSelector;->verticalAlignment:I
+
+    iget p1, p1, Landroidx/glance/appwidget/BoxChildSelector;->verticalAlignment:I
+
+    invoke-static {p0, p1}, Landroidx/glance/layout/Alignment$Vertical;->equals-impl0(II)Z
+
+    move-result p0
+
+    if-nez p0, :cond_29
+
+    return v2
+
+    :cond_29
+    return v0
+.end method
+
+.method public final getHorizontalAlignment-PGIyAqw()I
+    .registers 1
+
+    iget p0, p0, Landroidx/glance/appwidget/BoxChildSelector;->horizontalAlignment:I
+
+    return p0
+.end method
+
+.method public final getType()Landroidx/glance/appwidget/LayoutType;
+    .registers 1
+
+    iget-object p0, p0, Landroidx/glance/appwidget/BoxChildSelector;->type:Landroidx/glance/appwidget/LayoutType;
+
+    return-object p0
+.end method
+
+.method public final getVerticalAlignment-mnfRV0w()I
+    .registers 1
+
+    iget p0, p0, Landroidx/glance/appwidget/BoxChildSelector;->verticalAlignment:I
+
+    return p0
+.end method
+
+.method public hashCode()I
+    .registers 3
+
+    iget-object v0, p0, Landroidx/glance/appwidget/BoxChildSelector;->type:Landroidx/glance/appwidget/LayoutType;
+
+    invoke-virtual {v0}, Ljava/lang/Object;->hashCode()I
+
+    move-result v0
+
+    mul-int/lit8 v0, v0, 0x1f
+
+    iget v1, p0, Landroidx/glance/appwidget/BoxChildSelector;->horizontalAlignment:I
+
+    invoke-static {v1}, Landroidx/glance/layout/Alignment$Horizontal;->hashCode-impl(I)I
+
+    move-result v1
+
+    add-int/2addr v1, v0
+
+    mul-int/lit8 v1, v1, 0x1f
+
+    iget p0, p0, Landroidx/glance/appwidget/BoxChildSelector;->verticalAlignment:I
+
+    invoke-static {p0}, Landroidx/glance/layout/Alignment$Vertical;->hashCode-impl(I)I
+
+    move-result p0
+
+    add-int/2addr p0, v1
+
+    return p0
+.end method
+
+.method public toString()Ljava/lang/String;
+    .registers 5
+
+    iget-object v0, p0, Landroidx/glance/appwidget/BoxChildSelector;->type:Landroidx/glance/appwidget/LayoutType;
+
+    iget v1, p0, Landroidx/glance/appwidget/BoxChildSelector;->horizontalAlignment:I
+
+    invoke-static {v1}, Landroidx/glance/layout/Alignment$Horizontal;->toString-impl(I)Ljava/lang/String;
+
+    move-result-object v1
+
+    iget p0, p0, Landroidx/glance/appwidget/BoxChildSelector;->verticalAlignment:I
+
+    invoke-static {p0}, Landroidx/glance/layout/Alignment$Vertical;->toString-impl(I)Ljava/lang/String;
+
+    move-result-object p0
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    const-string v3, "BoxChildSelector(type="
+
+    invoke-direct {v2, v3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", horizontalAlignment="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    invoke-virtual {v2, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ", verticalAlignment="
+
+    invoke-virtual {v2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    const-string v0, ")"
+
+    invoke-static {v2, p0, v0}, Landroidx/concurrent/futures/a;->n(Ljava/lang/StringBuilder;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object p0
+
+    return-object p0
+.end method

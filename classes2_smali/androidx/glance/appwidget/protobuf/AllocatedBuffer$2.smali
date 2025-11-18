@@ -1,0 +1,145 @@
+.class Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;
+.super Landroidx/glance/appwidget/protobuf/AllocatedBuffer;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Landroidx/glance/appwidget/protobuf/AllocatedBuffer;->wrapNoCheck([BII)Landroidx/glance/appwidget/protobuf/AllocatedBuffer;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x1
+    name = null
+.end annotation
+
+
+# instance fields
+.field private position:I
+
+.field final synthetic val$bytes:[B
+
+.field final synthetic val$length:I
+
+.field final synthetic val$offset:I
+
+
+# direct methods
+.method public constructor <init>([BII)V
+    .registers 4
+
+    iput-object p1, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->val$bytes:[B
+
+    iput p2, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->val$offset:I
+
+    iput p3, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->val$length:I
+
+    invoke-direct {p0}, Landroidx/glance/appwidget/protobuf/AllocatedBuffer;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public array()[B
+    .registers 1
+
+    iget-object p0, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->val$bytes:[B
+
+    return-object p0
+.end method
+
+.method public arrayOffset()I
+    .registers 1
+
+    iget p0, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->val$offset:I
+
+    return p0
+.end method
+
+.method public hasArray()Z
+    .registers 1
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public hasNioBuffer()Z
+    .registers 1
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public limit()I
+    .registers 1
+
+    iget p0, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->val$length:I
+
+    return p0
+.end method
+
+.method public nioBuffer()Ljava/nio/ByteBuffer;
+    .registers 1
+
+    new-instance p0, Ljava/lang/UnsupportedOperationException;
+
+    invoke-direct {p0}, Ljava/lang/UnsupportedOperationException;-><init>()V
+
+    throw p0
+.end method
+
+.method public position()I
+    .registers 1
+
+    .line 1
+    iget p0, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->position:I
+
+    return p0
+.end method
+
+.method public position(I)Landroidx/glance/appwidget/protobuf/AllocatedBuffer;
+    .registers 3
+
+    if-ltz p1, :cond_9
+
+    .line 2
+    iget v0, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->val$length:I
+
+    if-gt p1, v0, :cond_9
+
+    .line 3
+    iput p1, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->position:I
+
+    return-object p0
+
+    .line 4
+    :cond_9
+    new-instance p0, Ljava/lang/IllegalArgumentException;
+
+    const-string v0, "Invalid position: "
+
+    .line 5
+    invoke-static {p1, v0}, LG2/u;->h(ILjava/lang/String;)Ljava/lang/String;
+
+    move-result-object p1
+
+    .line 6
+    invoke-direct {p0, p1}, Ljava/lang/IllegalArgumentException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+.end method
+
+.method public remaining()I
+    .registers 2
+
+    iget v0, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->val$length:I
+
+    iget p0, p0, Landroidx/glance/appwidget/protobuf/AllocatedBuffer$2;->position:I
+
+    sub-int/2addr v0, p0
+
+    return v0
+.end method

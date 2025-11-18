@@ -1,0 +1,179 @@
+.class public final Landroidx/glance/GlanceModifier$Companion;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Landroidx/glance/GlanceModifier;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingClass;
+    value = Landroidx/glance/GlanceModifier;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x19
+    name = "Companion"
+.end annotation
+
+.annotation runtime Lkotlin/Metadata;
+    d1 = {
+        "\u0000,\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0018\u0002\n\u0002\b\u0004\n\u0002\u0018\u0002\n\u0002\u0010\u000b\n\u0002\b\u0007\n\u0002\u0010\u000e\n\u0002\b\u0003\b\u0086\u0003\u0018\u00002\u00020\u0001B\t\b\u0002¢\u0006\u0004\b\u0002\u0010\u0003J7\u0010\t\u001a\u00028\u0000\"\u0004\b\u0000\u0010\u00042\u0006\u0010\u0005\u001a\u00028\u00002\u0018\u0010\b\u001a\u0014\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00028\u00000\u0006H\u0016¢\u0006\u0004\b\t\u0010\nJ7\u0010\u000b\u001a\u00028\u0000\"\u0004\b\u0000\u0010\u00042\u0006\u0010\u0005\u001a\u00028\u00002\u0018\u0010\b\u001a\u0014\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00028\u0000\u0012\u0004\u0012\u00028\u00000\u0006H\u0016¢\u0006\u0004\b\u000b\u0010\nJ#\u0010\u000f\u001a\u00020\r2\u0012\u0010\u000e\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\r0\fH\u0016¢\u0006\u0004\b\u000f\u0010\u0010J#\u0010\u0011\u001a\u00020\r2\u0012\u0010\u000e\u001a\u000e\u0012\u0004\u0012\u00020\u0007\u0012\u0004\u0012\u00020\r0\fH\u0016¢\u0006\u0004\b\u0011\u0010\u0010J\u0018\u0010\u0013\u001a\u00020\u00012\u0006\u0010\u0012\u001a\u00020\u0001H\u0096\u0004¢\u0006\u0004\b\u0013\u0010\u0014J\u000f\u0010\u0016\u001a\u00020\u0015H\u0016¢\u0006\u0004\b\u0016\u0010\u0017¨\u0006\u0018"
+    }
+    d2 = {
+        "Landroidx/glance/GlanceModifier$Companion;",
+        "Landroidx/glance/GlanceModifier;",
+        "<init>",
+        "()V",
+        "R",
+        "initial",
+        "Lkotlin/Function2;",
+        "Landroidx/glance/GlanceModifier$Element;",
+        "operation",
+        "foldIn",
+        "(Ljava/lang/Object;LJ3/n;)Ljava/lang/Object;",
+        "foldOut",
+        "Lkotlin/Function1;",
+        "",
+        "predicate",
+        "any",
+        "(LJ3/k;)Z",
+        "all",
+        "other",
+        "then",
+        "(Landroidx/glance/GlanceModifier;)Landroidx/glance/GlanceModifier;",
+        "",
+        "toString",
+        "()Ljava/lang/String;",
+        "glance_release"
+    }
+    k = 0x1
+    mv = {
+        0x1,
+        0x9,
+        0x0
+    }
+    xi = 0x30
+.end annotation
+
+
+# static fields
+.field static final synthetic $$INSTANCE:Landroidx/glance/GlanceModifier$Companion;
+
+
+# direct methods
+.method static constructor <clinit>()V
+    .registers 1
+
+    new-instance v0, Landroidx/glance/GlanceModifier$Companion;
+
+    invoke-direct {v0}, Landroidx/glance/GlanceModifier$Companion;-><init>()V
+
+    sput-object v0, Landroidx/glance/GlanceModifier$Companion;->$$INSTANCE:Landroidx/glance/GlanceModifier$Companion;
+
+    return-void
+.end method
+
+.method private constructor <init>()V
+    .registers 1
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public all(LJ3/k;)Z
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "LJ3/k;",
+            ")Z"
+        }
+    .end annotation
+
+    const-string p0, "predicate"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p0, 0x1
+
+    return p0
+.end method
+
+.method public any(LJ3/k;)Z
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "LJ3/k;",
+            ")Z"
+        }
+    .end annotation
+
+    const-string p0, "predicate"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    const/4 p0, 0x0
+
+    return p0
+.end method
+
+.method public foldIn(Ljava/lang/Object;LJ3/n;)Ljava/lang/Object;
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "LJ3/n;",
+            ")TR;"
+        }
+    .end annotation
+
+    const-string p0, "operation"
+
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method public foldOut(Ljava/lang/Object;LJ3/n;)Ljava/lang/Object;
+    .registers 3
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "<R:",
+            "Ljava/lang/Object;",
+            ">(TR;",
+            "LJ3/n;",
+            ")TR;"
+        }
+    .end annotation
+
+    const-string p0, "operation"
+
+    invoke-static {p2, p0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method public then(Landroidx/glance/GlanceModifier;)Landroidx/glance/GlanceModifier;
+    .registers 2
+
+    const-string p0, "other"
+
+    invoke-static {p1, p0}, Lkotlin/jvm/internal/p;->e(Ljava/lang/Object;Ljava/lang/String;)V
+
+    return-object p1
+.end method
+
+.method public toString()Ljava/lang/String;
+    .registers 1
+
+    const-string p0, "Modifier"
+
+    return-object p0
+.end method

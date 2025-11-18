@@ -1,0 +1,90 @@
+.class public final LS0/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements LS0/c;
+
+
+# instance fields
+.field public final a:F
+
+
+# direct methods
+.method public constructor <init>(F)V
+    .registers 2
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    iput p1, p0, LS0/a;->a:F
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Landroid/graphics/RectF;)F
+    .registers 2
+
+    iget p0, p0, LS0/a;->a:F
+
+    return p0
+.end method
+
+.method public final equals(Ljava/lang/Object;)Z
+    .registers 5
+
+    const/4 v0, 0x1
+
+    if-ne p0, p1, :cond_4
+
+    return v0
+
+    :cond_4
+    instance-of v1, p1, LS0/a;
+
+    const/4 v2, 0x0
+
+    if-nez v1, :cond_a
+
+    return v2
+
+    :cond_a
+    check-cast p1, LS0/a;
+
+    iget p0, p0, LS0/a;->a:F
+
+    iget p1, p1, LS0/a;->a:F
+
+    cmpl-float p0, p0, p1
+
+    if-nez p0, :cond_15
+
+    goto :goto_16
+
+    :cond_15
+    move v0, v2
+
+    :goto_16
+    return v0
+.end method
+
+.method public final hashCode()I
+    .registers 1
+
+    iget p0, p0, LS0/a;->a:F
+
+    invoke-static {p0}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
+
+    move-result-object p0
+
+    filled-new-array {p0}, [Ljava/lang/Object;
+
+    move-result-object p0
+
+    invoke-static {p0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
+
+    move-result p0
+
+    return p0
+.end method
