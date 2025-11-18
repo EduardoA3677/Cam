@@ -50,36 +50,10 @@
 .end method
 
 .method public static isDebugModeEnabled()Z
-    .registers 2
+    .registers 1
 
-    sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
-
-    const-string/jumbo v1, "user"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_14
-
-    invoke-static {}, Lcom/samsung/android/camera/core2/util/SemWrapper;->semIsProductDev()Z
-
-    move-result v0
-
-    if-eqz v0, :cond_12
-
-    goto :goto_14
-
-    :cond_12
-    const/4 v0, 0x0
-
-    goto :goto_15
-
-    :cond_14
-    :goto_14
     const/4 v0, 0x1
 
-    :goto_15
     return v0
 .end method
 

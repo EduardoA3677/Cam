@@ -153,45 +153,17 @@
 .end method
 
 .method public static isDebugModeEnabled()Z
-    .registers 2
+    .registers 1
 
-    sget-object v0, Landroid/os/Build;->TYPE:Ljava/lang/String;
+    const/4 v0, 0x1
 
-    const-string/jumbo v1, "user"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_15
-
-    const-string/jumbo v0, "ro.product_ship"
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    if-nez v0, :cond_16
-
-    :cond_15
-    const/4 v1, 0x1
-
-    :cond_16
-    return v1
+    return v0
 .end method
 
 .method public static isShipMode()Z
-    .registers 2
+    .registers 1
 
-    const-string/jumbo v0, "ro.product_ship"
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method

@@ -67,17 +67,9 @@
 .end method
 
 .method public static semIsProductDev()Z
-    .registers 2
+    .registers 1
 
-    const-string/jumbo v0, "ro.product_ship"
-
-    const/4 v1, 0x1
-
-    invoke-static {v0, v1}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
-
-    xor-int/2addr v0, v1
+    const/4 v0, 0x1
 
     return v0
 .end method
