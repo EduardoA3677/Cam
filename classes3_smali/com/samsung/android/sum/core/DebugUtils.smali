@@ -161,15 +161,9 @@
 .end method
 
 .method public static isShipMode()Z
-    .registers 2
+    .registers 1
 
-    const-string/jumbo v0, "ro.product_ship"
-
-    const/4 v1, 0x0
-
-    invoke-static {v0, v1}, Landroid/os/SemSystemProperties;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v0
+    const/4 v0, 0x0
 
     return v0
 .end method

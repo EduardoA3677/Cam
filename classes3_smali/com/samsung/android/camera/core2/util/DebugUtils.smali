@@ -58,117 +58,33 @@
 .end method
 
 .method public static isPppDumpDraftImageEnabled()Z
-    .registers 2
+    .registers 1
 
-    sget-object v0, Lcom/samsung/android/camera/core2/util/DebugUtils$DebugMode;->CAMERA_PPP_DUMP:Lcom/samsung/android/camera/core2/util/DebugUtils$DebugMode;
+    const/4 v0, 0x1
 
-    invoke-virtual {v0}, Lcom/samsung/android/camera/core2/util/DebugUtils$DebugMode;->getDebugIntValue()I
-
-    move-result v0
-
-    const/4 v1, 0x1
-
-    and-int/2addr v0, v1
-
-    if-eqz v0, :cond_b
-
-    goto :goto_c
-
-    :cond_b
-    const/4 v1, 0x0
-
-    :goto_c
-    return v1
+    return v0
 .end method
 
 .method public static isPppLoggingEnabled()Z
-    .registers 2
+    .registers 1
 
-    sget-object v0, Lcom/samsung/android/camera/core2/util/DebugUtils$DebugMode;->CAMERA_PPP_LOGGING:Lcom/samsung/android/camera/core2/util/DebugUtils$DebugMode;
-
-    invoke-virtual {v0}, Lcom/samsung/android/camera/core2/util/DebugUtils$DebugMode;->getDebugValue()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "T"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1a
-
-    const-string/jumbo v1, "t"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_18
-
-    goto :goto_1a
-
-    :cond_18
-    const/4 v0, 0x0
-
-    goto :goto_1b
-
-    :cond_1a
-    :goto_1a
     const/4 v0, 0x1
 
-    :goto_1b
     return v0
 .end method
 
 .method public static isPppWorkerDumpEnabled()Z
-    .registers 2
+    .registers 1
 
-    sget-object v0, Lcom/samsung/android/camera/core2/util/DebugUtils$DebugMode;->CAMERA_PPP_WORKER_DUMP:Lcom/samsung/android/camera/core2/util/DebugUtils$DebugMode;
-
-    invoke-virtual {v0}, Lcom/samsung/android/camera/core2/util/DebugUtils$DebugMode;->getDebugValue()Ljava/lang/String;
-
-    move-result-object v0
-
-    const-string v1, "T"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v1
-
-    if-nez v1, :cond_1a
-
-    const-string/jumbo v1, "t"
-
-    invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
-
-    move-result v0
-
-    if-eqz v0, :cond_18
-
-    goto :goto_1a
-
-    :cond_18
-    const/4 v0, 0x0
-
-    goto :goto_1b
-
-    :cond_1a
-    :goto_1a
     const/4 v0, 0x1
 
-    :goto_1b
     return v0
 .end method
 
 .method public static isShipMode()Z
     .registers 1
 
-    invoke-static {}, Lcom/samsung/android/camera/core2/util/SemWrapper;->semIsProductDev()Z
-
-    move-result v0
-
-    xor-int/lit8 v0, v0, 0x1
+    const/4 v0, 0x0
 
     return v0
 .end method
