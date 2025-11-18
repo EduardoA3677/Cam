@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 
+  Internal Build Resource Flags
+  
+  This file documents the boolean and string resource flags that should be enabled
+  for internal/debug builds. These values would normally be compiled into resources.arsc
+  but are documented here for reference.
+-->
+
+<resources>
+    <!-- Debug and Developer Flags -->
+    <bool name="is_internal_build">true</bool>
+    <bool name="is_debug_build">true</bool>
+    <bool name="is_staging_build">true</bool>
+    <bool name="enable_developer_menu">true</bool>
+    <bool name="enable_hidden_settings">true</bool>
+    <bool name="enable_advanced_debug">true</bool>
+    
+    <!-- Feature Flags - All Enabled -->
+    <bool name="feature_advanced_recording">true</bool>
+    <bool name="feature_high_resolution">true</bool>
+    <bool name="feature_pro_mode">true</bool>
+    <bool name="feature_raw_capture">true</bool>
+    <bool name="feature_scene_detection">true</bool>
+    <bool name="feature_developer_options">true</bool>
+    <bool name="feature_test_mode">true</bool>
+    
+    <!-- Camera Feature Flags -->
+    <bool name="camera_ppp_logging">true</bool>
+    <bool name="camera_ppp_dump">true</bool>
+    <bool name="camera_ppp_worker_dump">true</bool>
+    <bool name="camera_debug_overlay">true</bool>
+    <bool name="camera_performance_monitoring">true</bool>
+    
+    <!-- Build Information Strings -->
+    <string name="build_type">debug</string>
+    <string name="build_variant">internal</string>
+    <string name="internal_build_version">internal-debug-v1.0</string>
+</resources>
