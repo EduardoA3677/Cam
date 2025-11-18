@@ -1,0 +1,40 @@
+.class Lcom/sec/android/app/camera/engine/recording/session/PauseRecordingTask;
+.super Lcom/sec/android/app/camera/engine/recording/session/SessionTask;
+.source "SourceFile"
+
+
+# direct methods
+.method public constructor <init>(Ljava/util/Map;)V
+    .registers 2
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Ljava/util/Map<",
+            "Landroid/view/Surface;",
+            "Lcom/sec/android/app/camera/engine/recording/session/RecordingSession;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-direct {p0, p1}, Lcom/sec/android/app/camera/engine/recording/session/SessionTask;-><init>(Ljava/util/Map;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public getExceptionType()I
+    .registers 1
+
+    const/4 p0, 0x6
+
+    return p0
+.end method
+
+.method public run(Lcom/sec/android/app/camera/engine/recording/session/RecordingSession;)V
+    .registers 2
+
+    invoke-virtual {p1}, Lcom/sec/android/app/camera/engine/recording/session/RecordingSession;->pauseRecording()V
+
+    return-void
+.end method
