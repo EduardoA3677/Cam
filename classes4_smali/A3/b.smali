@@ -1,0 +1,68 @@
+.class public final LA3/b;
+.super LB3/h;
+.source "SourceFile"
+
+
+# instance fields
+.field public a:I
+
+.field public final synthetic b:LJ3/k;
+
+
+# direct methods
+.method public constructor <init>(LJ3/k;Lz3/d;)V
+    .registers 3
+
+    iput-object p1, p0, LA3/b;->b:LJ3/k;
+
+    invoke-direct {p0, p2}, LB3/h;-><init>(Lz3/d;)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final invokeSuspend(Ljava/lang/Object;)Ljava/lang/Object;
+    .registers 4
+
+    iget v0, p0, LA3/b;->a:I
+
+    const/4 v1, 0x1
+
+    if-eqz v0, :cond_16
+
+    if-ne v0, v1, :cond_e
+
+    const/4 v0, 0x2
+
+    iput v0, p0, LA3/b;->a:I
+
+    invoke-static {p1}, Ll0/a;->x(Ljava/lang/Object;)V
+
+    goto :goto_24
+
+    :cond_e
+    new-instance p0, Ljava/lang/IllegalStateException;
+
+    const-string p1, "This coroutine had already completed"
+
+    invoke-direct {p0, p1}, Ljava/lang/IllegalStateException;-><init>(Ljava/lang/String;)V
+
+    throw p0
+
+    :cond_16
+    iput v1, p0, LA3/b;->a:I
+
+    invoke-static {p1}, Ll0/a;->x(Ljava/lang/Object;)V
+
+    iget-object p1, p0, LA3/b;->b:LJ3/k;
+
+    invoke-static {v1, p1}, Lkotlin/jvm/internal/I;->d(ILjava/lang/Object;)V
+
+    invoke-interface {p1, p0}, LJ3/k;->invoke(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object p1
+
+    :goto_24
+    return-object p1
+.end method

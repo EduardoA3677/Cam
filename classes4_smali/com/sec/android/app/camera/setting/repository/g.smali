@@ -1,0 +1,276 @@
+.class public final synthetic Lcom/sec/android/app/camera/setting/repository/g;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/sec/android/app/camera/setting/repository/ValueGetter;
+
+
+# instance fields
+.field public final synthetic a:I
+
+
+# direct methods
+.method public synthetic constructor <init>(I)V
+    .registers 2
+
+    iput p1, p0, Lcom/sec/android/app/camera/setting/repository/g;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final get()I
+    .registers 1
+
+    iget p0, p0, Lcom/sec/android/app/camera/setting/repository/g;->a:I
+
+    packed-switch p0, :pswitch_data_9c
+
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->f2()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_a  #0x1c
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->t7()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_f  #0x1b
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->Y1()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_14  #0x1a
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->e4()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_19  #0x19
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->K8()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_1e  #0x18
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->i2()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_23  #0x17
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->Y()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_28  #0x16
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->C4()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_2d  #0x15
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->x8()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_32  #0x14
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->f4()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_37  #0x13
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->H()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_3c  #0x12
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->w1()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_41  #0x11
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->t2()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_46  #0x10
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->e7()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_4b  #0xf
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->G8()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_50  #0xe
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->w3()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_55  #0xd
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->y2()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_5a  #0xc
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->x1()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_5f  #0xb
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->i5()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_64  #0xa
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->G2()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_69  #0x9
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->q()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_6e  #0x8
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->g()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_73  #0x7
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->U2()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_78  #0x6
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->I()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_7d  #0x5
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->h8()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_82  #0x4
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->X1()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_87  #0x3
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->D5()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_8c  #0x2
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->p2()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_91  #0x1
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->y3()I
+
+    move-result p0
+
+    return p0
+
+    :pswitch_96  #0x0
+    invoke-static {}, Lcom/sec/android/app/camera/setting/repository/AbstractCameraSettings;->A3()I
+
+    move-result p0
+
+    return p0
+
+    nop
+
+    :pswitch_data_9c
+    .packed-switch 0x0
+        :pswitch_96  #00000000
+        :pswitch_91  #00000001
+        :pswitch_8c  #00000002
+        :pswitch_87  #00000003
+        :pswitch_82  #00000004
+        :pswitch_7d  #00000005
+        :pswitch_78  #00000006
+        :pswitch_73  #00000007
+        :pswitch_6e  #00000008
+        :pswitch_69  #00000009
+        :pswitch_64  #0000000a
+        :pswitch_5f  #0000000b
+        :pswitch_5a  #0000000c
+        :pswitch_55  #0000000d
+        :pswitch_50  #0000000e
+        :pswitch_4b  #0000000f
+        :pswitch_46  #00000010
+        :pswitch_41  #00000011
+        :pswitch_3c  #00000012
+        :pswitch_37  #00000013
+        :pswitch_32  #00000014
+        :pswitch_2d  #00000015
+        :pswitch_28  #00000016
+        :pswitch_23  #00000017
+        :pswitch_1e  #00000018
+        :pswitch_19  #00000019
+        :pswitch_14  #0000001a
+        :pswitch_f  #0000001b
+        :pswitch_a  #0000001c
+    .end packed-switch
+.end method
